@@ -1,493 +1,1119 @@
-
-
-
-
-
-
 <!DOCTYPE html>
-<html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
-    <head >
-        <meta charset="UTF-8" />
-        <title>Morehead City, NC Weather Conditions</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Morehead City, NC</title>
+    <link rel="icon" type="image/png" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="seasons.css"/>
+    <script src="seasons.js"></script>
+  </head>
 
-        <meta name="description" content="Weather conditions for Morehead City, NC as observed by a personal weather station and the weewx weather software"/>
-        <meta name="robots" content="noodp"/>
-        <link rel="canonical" href="https://www.pwsweather.com/station/pws/KNCMOREH15" />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Morehead City, NC Weather Conditions" />
-        <meta property="og:description" content="Weather conditions for Morehead City, NC as observed by a personal weather station and the weewx weather software" />
-        <meta property="og:url" content="https://www.pwsweather.com/station/pws/KNCMOREH15" />
-        <meta property="og:site_name" content="Morehead City, NC Weather Conditions" />
+  <body onload="setup();">
 
-        <link rel='dns-prefetch' href='//code.highcharts.com' />
-        <link rel='dns-prefetch' href='//fonts.googleapis.com' />
-        <link rel='dns-prefetch' href='//stackpath.bootstrapcdn.com' />
-        <link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
-
-        <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Roboto%3A300%2C400%2C700&#038;ver=1.0' type='text/css' media='all' />
-        <link rel='stylesheet' href='//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' type='text/css' media='all' />
-        <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css?ver=4.7.4' type='text/css' media='all' />
-        <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-        <link rel='stylesheet' href='//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css' type='text/css' media='all' />
-        <link rel='stylesheet' href='./style.css?ver=1614021936' type='text/css' media='all' id="belchertownStyle" />
-        <link rel='stylesheet' href='./belchertown-dark.min.css?ver=1614021936' type='text/css' media='all' id="belchertownStyle" />
-        
-        <link rel="manifest" href="./manifest.json" crossorigin="use-credentials">
-        <link rel="apple-touch-icon" href="./images/station.png">
-        <link rel="apple-touch-icon" sizes="48x48" href="./images/station48.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="./images/station72.png">
-        <link rel="apple-touch-icon" sizes="96x96" href="./images/station96.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="./images/station144.png">
-        <link rel="apple-touch-icon" sizes="168x168" href="./images/station168.png">
-        <link rel="apple-touch-icon" sizes="192x192" href="./images/station192.png">
-        
-        <!--[if lt IE 9]>
-        <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js'></script>
-        <![endif]-->
-        <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-        <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
-        <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.1.0/paho-mqtt.min.js"></script>
-        <script type='text/javascript' src='//code.highcharts.com/stock/highstock.js'></script>
-        <script type='text/javascript' src='//code.highcharts.com/highcharts-more.js'></script>
-        <script type='text/javascript' src='//code.highcharts.com/modules/exporting.js'></script>
-        <script type='text/javascript' src='//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'></script>
-        <script type='text/javascript' src='./js/belchertown.js?1614021936'></script>
-        <script>
-            // Set the session variables for the theme
-            if ( sessionStorage.getItem('theme') === null ) {
-                sessionStorage.setItem('theme', 'dark');
-            }
-            if ( sessionStorage.getItem('currentTheme') === null ) {
-                sessionStorage.setItem('currentTheme', 'dark');
-            }
-        </script>
-        
-        <link rel='shortlink' href="https://www.pwsweather.com/station/pws/KNCMOREH15" />
-                
-        <link rel="icon" href="./favicon.ico" />
-        
-
-
-    </head>
+<div id="title_bar">
+  <div id="title">
+    <h1 class="page_title">Morehead City, NC</h1>
+    <p class="lastupdate">02/23/2021 06:25:00 AM</p>
+  </div>
+  <div id="rss_link"><a href="rss.xml">RSS</a></div>
+  <div id="reports">
+    Monthly Reports:
+    <select name="reports" onchange="openTabularFile(value)">
+      <option value="2020-06">2020-06</option>
+      <option value="2020-07">2020-07</option>
+      <option value="2020-08">2020-08</option>
+      <option value="2020-09">2020-09</option>
+      <option value="2020-10">2020-10</option>
+      <option value="2020-11">2020-11</option>
+      <option value="2020-12">2020-12</option>
+      <option value="2021-01">2021-01</option>
+      <option value="2021-02">2021-02</option>
+      <option selected>- Select Month -</option>
+    </select>
+    <br/>
+    Yearly Reports:
+    <select name="reports" onchange="openTabularFile(value)">
+      <option value="2020">2020</option>
+      <option value="2021">2021</option>
+      <option selected>- Select Year -</option>
+    </select>
+    <br/>
+  </div>
+</div>
     
-    <body class="page-template-default page full-width-content dark" itemscope itemtype="https://schema.org/WebPage">
-        <div class="site-container">
-            <header class="site-header">
-                <div class="wrap">
-                    <div class="title-area">
-                        <p class="site-title" itemprop="headline">
-                            <a href="./">
-                                <img src="https://moreheadcitync.org/ImageRepository/Document?documentID=460" id="logo_image" title="Morehead City, NC Weather Conditions" alt="Morehead City, NC Weather Conditions">
-                            </a>
-                        </p>
-                    </div>
-                    <div class="widget-area header-widget-area">
-                        <section id="nav_menu">
-                            <div class="widget-wrap">
-                                <nav class="nav-header" itemscope itemtype="https://schema.org/SiteNavigationElement">
-                                    <ul id="menu-menu" class="menu genesis-nav-menu">
-                                        <!-- class = current-menu-item -->
-                                        <li class="menu-item menu-item-home"><a href="." itemprop="url"><span itemprop="name">Home</span></a></li>
-                                        <li class="menu-item menu-item-1"><a href="./graphs" itemprop="url"><span itemprop="name">Graphs</span></a></li>
-                                        <li class="menu-item menu-item-2"><a href="./records" itemprop="url"><span itemprop="name">Records</span></a></li>
-                                        <li class="menu-item menu-item-3"><a href="./reports" itemprop="url"><span itemprop="name">Reports</span></a></li>
-                                        <li class="menu-item menu-item-4"><a href="./about" itemprop="url"><span itemprop="name">About</span></a></li>
-                                        <label class="themeSwitchLabel">
-                                            <input type="checkbox" id="themeSwitch" checked>
-                                            <span class="slider round"></span>
-                                        </label>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </header>
-      
-    <script type="text/javascript">
-        var finalRotation;
-        var mqttMsg;
-        var mqttclient = "website" + Math.floor(Math.random() * 999999999);
-        var moment_locale = "en-US";
-        moment.locale(moment_locale);
-        
-        var homepage_graphgroup = "homepage";
-        
-        ajaxweewx(); // Initial call to load from weewx (date, daily high, low, etc)
-        
-        // Load forecast
-        ajaxforecast(); // Initial call to load forecast data like 8 day outlook, weather icon and observation text
-        
-        
-        jQuery(document).ready(function() {
-            get_outTemp_color( "degree_F", "56.0" );
-            
-            rotateThis( "182" );
+    <div id="contents">
+      <div id="widget_group">
 
-            // Update the Last Updated timestamp with moment.js,
-            updated = moment.unix( 1614021900 ).utcOffset(-300.0).format("LL, LTS");
-            updated_text = "Last Updated " + updated;
-            jQuery(".updated").html( updated_text );
-            
-            if ( moment.unix( "1613883693.9" ).isValid() ) {
-                // Check that the time is the time (number) and not the "no earthquake available" wording
-                jQuery(".earthquake-time").html( moment.unix( "1613883693.9" ).utcOffset(-300.0).format( "LLL" ) );
-            } else {
-                jQuery(".earthquake-time").html( "1613883693.9" );
-            }
-            
-            var graphgroups_raw = {"homepage": ["chart1", "chart2", "chart3", "chart4", "windrosechart", "daylightning", "outTempRadialYear"], "day": ["chart1", "chart2", "chart3", "chart4"], "week": ["chart1", "chart2", "chart3", "chart4"], "month": ["chart1", "chart2", "chart3", "chart4"], "year": ["chart1", "chart2", "chart3", "chart4"]}; // All charts and IDs
-            var thisPageGraphs = graphgroups_raw[homepage_graphgroup]; // Filter all charts down to the ones we want for this page
-            // Loop through the graph groups for this page and add the graph divs to the page
-            try {
-                thisPageGraphs.forEach( graphID => {
-                    jQuery(".graph-outer").append('<div class="col-sm-6"><div id="' + graphID + '" style="width:100%;height:100%;margin-top:20px;"></div></div>');
-                });
-                showChart(homepage_graphgroup);
-            } catch(err) {
-                console.log("ERROR: Cannot add graphs from [" + homepage_graphgroup + "] graph group: " + err.message);
-            }
-            
-            if ( getURLvar("offline") && ( getURLvar("offline") == "true" || getURLvar("offline") == "1" ) ) {
-                belchertown_debug("MQTT: offline url var detected. Skipping MQTT connect.");
-            } else {
-                connect(); // Begin mqtt after weewx initial load
-                // If the Restart button is clicked, reconnect to mqtt and update weewx and forecast data
-                jQuery(document).on('click', '.restart-interval', function() { 
-                    ajaxweewx(); // Update weewx data
-                    ajaxforecast(); // Update forecast data
-                    ajaximages(); // Update radar and home page hook "img src" if present
-                    connect(); // Restart mqtt after weewx data's re-loaded
-                    showChart(homepage_graphgroup);
-                });
-            }
-            
-            
-        });
-        
-    </script>
-  
-    <div class="site-inner">
-        <main class="content">    
+<div id='current_widget' class="widget">
+  <div class="widget_title">
+    Current Conditions
+    <a class="widget_control"
+      onclick="toggle_widget('current')">&diams;</a>
+  </div>
 
-            <article class="weewx frontpage" itemscope="" itemtype="http://schema.org/CreativeWork">
-            
-                <!-- Top bar with city and share -->
-                <div class="wx-stn-info-container">
-                    <div class="wx-stn-name">
-                        <h1>Morehead City, NC  Weather Conditions</h1>                    
-                    </div>
-                    <div class="wx-stn-info">
-                        Observations are powered by an Acurite 5n1 Pro
-                    </div>
-                    <div class="clear"></div>
-                    <!-- Updated time ago -->
-                    <div class="updated-wrapper">
-                        <div class="onlineMarkerOuter">
-                            <span class="loadingMarker" style="display:none"></span>
-                            <span class="onlineMarker" style="display:none"></span>
-                            <span class="offlineMarker" style="display:none"></span>
-                        </div>
-                        <div class="updated"></div><!-- AJAX moment.js -->
-                    </div>
-                    <div class="clear"></div>
-                    <div class="last-updated-alert" style="display:none;"></div><!-- AJAX moment.js -->
-                    <div class="wx-stn-alert"><span class="wx-stn-alert-text"></span></div><!-- AJAX -->
-                </div>
-                
-                <!-- First row with temperature, observation data and radar -->
-                <div class="row temperature-row">
-                    <div class="col-lg-4 toprow-height">
-                        <div class="row obs-row">
-                        
-                            <!-- Temperature -->
-                            <div class="weather-obs-top">
-                                <div class="row temp-observation">
-                                    <div class="col-sm-6 current_obs_top">
-                                        <img id="wxicon" src="./images/partly-cloudy-day.png">
-                                    </div>
-                                    <div class="col-sm-6 current_temp">
-                                        <div class="outtemp_outer"><span class="outtemp">56.0</span><sup class="outtempunitlabelsuper"> &#176;F</sup></div><!-- AJAX -->
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-6 current-obs-container">
-                                        <div class="current-obs-text">
-                                            Partly Cloudy
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="feelslike">Feels like: 54.2 &#176;F</div><!-- AJAX -->
-                                        <div class="stn-high-low">
-                                            <table class="stn-high-low-table">
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="stn-high-low-table-title">High</td>
-                                                        <td class="stn-high-low-table-title border-left">Low</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="high">57.9 &#176;F</td>
-                                                        <td class="border-left low">33.4 &#176;F</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Wind -->
-                        <div class="row windrow">
-                            <div class="weather-obs-bottom">
-                            <div class="col-sm-12 current_wind">
-                                <div class="col-sm-6">
-                                    <div class="compass">
-                                        <div class="direction">
-                                            <span class="curwinddir">
-                                            S
-                                            </span>
-                                            <span class="curwinddeg">
-                                            182&#176;
-                                            </span>
-                                        </div>
-                                        <div class="arrow"></div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 windspeedtable">
-                                    <table class="wind-table">
-                                        <tbody>
-                                            <tr>
-                                                <td class="windtext">Speed</td>
-                                                <td class="windtext border-left gust">Gust</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <span class="curwindspeed">
-                                                        5
-                                                    </span>
-                                                </td>
-                                                <td class="border-left gust">&nbsp;
-                                                    <span class="curwindgust">
-                                                        7
-                                                    </span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="mph" colspan="3"> mph</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Station observations -->
-                    <div class="col-lg-3 current-almanac toprow-height border-left border-right">
-                        <div class="station-observations weather-obs-top">
-                            <table cellpadding="0" cellspacing="0">
-                                <tbody>
-                                    <tr><td class='station-observations-label'>Barometer</td><td><span class=barometer>30.004 inHg</span><!-- AJAX --> <span class="pressure-trend"><i class="fa fa-arrow-down barometer-down"></i></span></td></tr><tr><td class='station-observations-label'>Dew Point</td><td><span class=dewpoint>53.1 &#176;F</span><!-- AJAX --></td></tr><tr><td class='station-observations-label'>Humidity</td><td><span class=outHumidity>90%</span><!-- AJAX --></td></tr><tr><td class='station-observations-label'>Rain</td><td><span class='dayRain'>0.33 in</span><!-- AJAX -->&nbsp;<span class='border-left'>&nbsp;</span><span class='rainRate'>0.00 in/hr</span><!-- AJAX --></td></tr><tr><td class='station-observations-label'>Inside Temperature</td><td><span class=inTemp>66.7 &#176;F</span><!-- AJAX --></td></tr>
-                                </tbody>
-                            </table>
-                        </div>                        
-                        
-                        <!-- Sun and Moon section -->
-                        <div class="weather-obs-bottom">
-                            <table cellpadding="0" cellspacing="0">
-                                <tbody>
-                                    <tr>
-                                        <td colspan="2">
-                                            <div class="row small-almanac">
-                                                <div class="sun-moon-title">
-                                                    Sun & Moon
-                                                </div>
-                                                <div class="col-sm-5 sun">
-                                                    <span class="sunrise-set-image"><img src="./images/sunrise.png"></span><span class="sunrise-value"></span><!-- moment.js -->
-                                                    <br>
-                                                    <span class="sunrise-set-image"><img src="./images/sunset.png"></span><span class="sunset-value"></span><!-- moment.js -->
-                                                </div>
-                                                <div class="col-sm-7 moon">
-                                                    <div class="moon-container">
-                                                        <span class="moon-icon">
-                                                                <div class='wi wi-moon-alt-waxing-gibbous-3 $hemisphere'></div>
-                                                        </span>
-                                                        <strong><span class="moon-phase">Waxing Gibbous</span></strong><!-- AJAX -->
-                                                        <br>
-                                                        <span class="moon-visible"><strong>78%</strong> visible</span><!-- AJAX -->
-                                                    </div>
-                                                </div>
-                                                <div class="clear"></div>
-                                                <!-- Almanac Modal -->
-                                                <div class="sun-moon-modal"><a href="#almanac" data-toggle="modal" data-target="#almanac">More Almanac Information</a></div>
-                                                <!-- Almanac Modal -->
-                                                <div class="modal fade" id="almanac" tabindex="-1" role="dialog" aria-labelledby="almanac" aria-hidden="true">
-                                                    <div class="modal-dialog modal-lg" role="document">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                    <span aria-hidden="true">&times;</span>
-                                                                </button>
-                                                                <h4 class="modal-title" id="almanac">Almanac Information</h4>
-                                                            </div>
-                                                            <div class="almanac-extras-modal-body modal-body">
-<div id='celestial_widget' class='widget'> <div class='widget_contents'> <div id='celestial_details'> <div class='celestial_body'> <table class='celestial'> <tr><th>&#9728; Sun</th><th></th></tr> <tr> <td class='label'>Start civil twilight</td> <td class='data'>06:18:05 AM</td> </tr> <tr> <td class='label'>Rise</td> <td class='data'>06:44:00 AM</td> </tr> <tr> <td class='label'>Transit</td> <td class='data'>12:20:17 PM</td> </tr> <tr> <td class='label'>Set</td> <td class='data'>05:57:04 PM</td> </tr> <tr> <td class='label'>End Civil Twilight</td> <td class='data'>06:23:00 PM</td> </tr> <tr> <td class='label'>Azimuth</td> <td class='data'>219.4&deg;</td> </tr> <tr> <td class='label'>Altitude</td> <td class='data'>36.5&deg;</td> </tr> <tr> <td class='label'>Right ascension</td> <td class='data'>336.3&deg;</td> </tr> <tr> <td class='label'>Declination</td> <td class='data'>-9.9&deg;</td> </tr><tr><td class='label'>Equinox</td><td class='data'>03/20/2021 05:37:26 AM</td></tr><tr><td class='label'>Solstice</td><td class='data'>06/20/2021 11:32:14 PM</td></tr><tr> <td class='label'>Total daylight</td> <td class='data'>11 hours, 13 minutes, 3 seconds<br/>2 minutes, 5 seconds more than yesterday</td> </tr> </table> </div> <div class='celestial_body'> <table class='celestial'> <tr><th>&#9789; Moon</th><th></th></tr> <tr><td class='label'>&nbsp;</td><td class='data'>&nbsp;</td></tr> <tr> <td class='label'>Rise</td> <td class='data'>01:12:55 PM</td> </tr> <tr> <td class='label'>Transit</td> <td class='data'>08:44:23 PM</td> </tr> <tr> <td class='label'>Set</td> <td class='data'>03:21:36 AM</td> </tr> <tr><td class='label'>&nbsp;</td><td class='data'>&nbsp;</td></tr> <tr> <td class='label'>Azimuth</td> <td class='data'>68.3&deg;</td> </tr> <tr> <td class='label'>Altitude</td> <td class='data'>12.0&deg;</td> </tr> <tr> <td class='label'>Right ascension</td> <td class='data'>99.7&deg;</td> </tr> <tr> <td class='label'>Declination</td> <td class='data'>24.5&deg;</td> </tr><tr> <td class='label'>Full moon</td> <td class='data'>02/27/2021 03:17:17 AM</td> </tr> <tr> <td class='label'>New moon</td> <td class='data'>03/13/2021 05:21:06 AM</td> </tr><tr> <td class='label'>Phase</td> <td class='data'>Waxing gibbous<br/> 78% full</td> </tr> </table> </div> </div> </div> </div> <div class='clear'></div><div class='almanac_last_updated'></div>
-                                                            </div><!-- AJAX -->
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    
-                    <!-- Radar image -->
-                    <div class="col-lg-5 radar-map toprow-height">
-                        <iframe width="650" height="360" src="https://embed.windy.com/embed2.html?lat=34.743313&lon=-76.720492&zoom=8&level=surface&overlay=radar&menu=&message=true&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=34.743313&detailLon=-76.720492&metricWind=&metricTemp=&radarRange=-1" frameborder="0"></iframe>
-                    </div>
-                </div>
-                <!-- End of first row -->
-                
+  <div class="widget_contents">
+  <table>
+    <tbody>
+      <tr>
+        <td class="label">Outside Temperature</td>
+        <td class="data">44.8&#176;F</td>
+      </tr>
+      <tr>
+        <td class="label">Heat Index</td>
+        <td class="data">43.6&#176;F</td>
+      </tr>
+      <tr>
+        <td class="label">Wind Chill</td>
+        <td class="data">44.2&#176;F</td>
+      </tr>
+      <tr>
+        <td class="label">Dew Point</td>
+        <td class="data">44.5&#176;F</td>
+      </tr>
+      <tr>
+        <td class="label">Humidity</td>
+        <td class="data">99%</td>
+      </tr>
+      <tr>
+        <td class="label">Barometer</td>
+        <td class="data">29.987 inHg (0.043)</td>
+      </tr>
+      <tr>
+        <td class="label">Wind</td>
+        <td class="data">3 mph NW (312&#176;)</td>
+      </tr>
+      <tr>
+        <td class="label">Rain Rate</td>
+        <td class="data">0.00 in/h</td>
+      </tr>
+      <tr>
+        <td class="label">Rain Today</td>
+        <td class="data">0.00 in</td>
+      </tr>
+      <tr>
+        <td class="label">Strikes Today</td>
+        <td class="data">0</td>
+      </tr>
+      <tr>
+        <td class="label">Inside Temperature</td>
+        <td class="data">65.7&#176;F</td>
+      </tr>
+      <tr>
+        <td class="label">Inside Humidity</td>
+        <td class="data">42%</td>
+      </tr>
+      <tr>
+        <td class="label">Beer Fridge</td>
+        <td class="data">37.0&#176;F</td>
+      </tr>
+      <tr>
+        <td class="label">Garage</td>
+        <td class="data">59.2&#176;F</td>
+      </tr>
+      <tr>
+        <td class="label">Nursery</td>
+        <td class="data">63.8&#176;F</td>
+      </tr>
+      <tr>
+        <td class="label">Main Fridge</td>
+        <td class="data">34.2&#176;F</td>
+      </tr>
+      <tr>
+        <td class="label">Lightning Tower</td>
+        <td class="data">45.5&#176;F</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
 
-                <!-- Start of second row -->
-                <div class="row forecastrow">
-                    <!-- Forecast -->
-                    <div class="col-lg-12 forecast">
-                        <div class="forecast-title">
-                            7 Day Forecast <span class="forecast-subtitle"></span><!-- moment.js -->
-                        </div>
-                        <div class="row forecasts"></div><!-- JS -->
-                    </div>        
-                </div>
-                <!-- End of second row -->
-                
-                
-                <!-- Start of third row -->
-                <div class="row eq-stats-row">            
-                    <div class="col-sm-9 stn-quick-stats">
-                        
-                        <!-- Today Snapshot Stats -->
-                        <div class="row">
-                            <div class="snapshot-records-text">
-                                Weather Record Snapshots. <a href="./records">View all weather records here.</a>
-                            </div>
-                            
-                            <div class="col-sm-6 stn-quick-stats">
-                                <div class="stats-title">
-                                    <span class="snapshot-records-today-header"></span><!-- JS and AJAX -->
-                                </div>
-                                <table>
-                                    <tr>
-                                        <td><b>High:</b></td>    <td><span class="dailystatshigh">57.9 &#176;F</span></td><!-- AJAX -->
-                                        <td><b>Low:</b></td>    <td><span class="dailystatslow">33.4 &#176;F</span></td><!-- AJAX -->
-                                    </tr>
-                                    <tr>
-                                        <td><b>Average Wind:</b></td>    <td><span class="dailystatswindavg">5 mph</span></td><!-- AJAX -->
-                                        <td><b>Highest Wind:</b></td>        <td><span class="dailystatswindmax">19 mph</span></td><!-- AJAX -->                    
-                                    </tr>
-                                    <tr>
-                                        <td><b>Today's Rain:</b></td>    <td><span class="dailystatsrain">0.33 in</span></td><!-- AJAX -->
-                                        <td><b>Highest Rate:</b></td>    <td><span class="dailystatsrainrate">0.44 in/hr</span></td><!-- AJAX -->
-                                    </tr>
-                                </table>
-                            </div>
+</div>
 
-                            <!-- This Month Snapshot Stats -->
-                            <div class="col-sm-6 stn-quick-stats border-left">
-                                <div class="stats-title">
-                                    <span class="snapshot-records-month-header"></span><!-- JS and AJAX -->
-                                </div>
-                                <table>
-                                    <tr>
-                                        <td><b>High:</b></td>    <td><span class="monthstatshigh">66.0 &#176;F</span></td><!-- AJAX -->
-                                        <td><b>Low:</b></td>    <td><span class="monthstatslow">28.4 &#176;F</span></td><!-- AJAX -->
-                                    </tr>
-                                    <tr>
-                                        <td><b>Average Wind:</b></td>    <td><span class="monthstatswindavg">5 mph</span></td><!-- AJAX -->
-                                        <td><b>Highest Wind:</b></td>        <td><span class="monthstatswindmax">30 mph</span></td><!-- AJAX -->
-                                    </tr>
-                                    <tr>
-                                        <td><b>Total Rain:</b></td>        <td><span class="monthstatsrain">8.61 in</span></td><!-- AJAX -->
-                                        <td><b>Highest Rate:</b></td>    <td><span class="monthstatsrainrate">1.76 in/hr</span></td><!-- AJAX -->
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Earthquake data -->
-                    <div class="col-sm-3 earthquake-container border-left">
-                        <div class="eq-title">Recent Local Earthquake</div>
-                        <div class="eq-region">
-                            <span class="earthquake-time"></span><!-- moment.js -->
-                            <br>
-                            <i class="fa fa-map-marker"></i> <a href="https://earthquake.usgs.gov/earthquakes/eventpage/se60122923" target="_blank">9 km SSW of Banner Hill, Tennessee</a>
-                            <div class="row earthquake-info">
-                                <div class="col-sm-6">
-                                    <i class="wi wi-earthquake"></i>Magnitude <span class="magnitude">2.4</span>
-                                </div>
-                                <div class="col-sm-6 earthquake-distance-outer border-left">
-                                    <span class="earthquake-distance">336.5  miles WNW</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End of third row -->
-                
-                
-                <!-- Begin of fourth row - dynamic charts -->
-                <div class="row highcharts-row graph">
-                    <div class="col-sm-12 wx-graph-front">
-                        <span class="homepage-graphgroup-title">Homepage</span> <a href="./graphs">View more here.</a>
-                    </div>
-                    
-                    <div class="graph-outer row"></div><!-- JS populated -->
-                    
-                </div>
-                <!-- End of fourth row -->
-                
-                <div class="clear"></div>
-                
-                
-            </article>
+<link rel='stylesheet' type='text/css' href='forecast_compact.css'/>
 
-        </main>
+<div id='forecast_widget' class="widget">
+  <div class="widget_title">
+    Forecast
+    <a class="widget_control"
+      onclick="toggle_widget('forecast')">&diams;</a>
+  </div>
+  <div class="widget_contents">
+
+
+<div class='fc_compact'>
+
+
+
+
+
+
+
+
+
+
+
+
+<table>
+  <tr>
+    <td class='first-column'>
+      <div class='row-day'>&nbsp;</div>
+      <div class='row-outlook'></div>
+      <div class='row-temp'>
+        <div>Max</div>
+        <div>Min</div>
+      </div>
+      <div class='row-wind'>Wind</div>
+      <div class='row-pop'>PoP</div>
+    </td>
+    <td>
+      <div class='row-day'>
+        <span class='day'>Tue</span>
+      </div>
+      <div class='row-outlook'>
+        <img class='outlook-img' src='icons/CL.png' alt='CL' title='Clear' />
+      </div>
+      <div class='row-temp'>
+        <div>62</div>
+        <div>40</div>
+      </div>
+      <div class='row-wind'>
+        7.0
+      </div>
+      <div class='row-pop'>
+        0
+      </div>
+      <div class='row-precip'>
+      </div>
+      <div class='row-obvis'>
+      </div>
+    </td>
+    <td>
+      <div class='row-day'>
+        <span class='day'>Wed</span>
+      </div>
+      <div class='row-outlook'>
+        <img class='outlook-img' src='icons/CL.png' alt='CL' title='Clear' />
+      </div>
+      <div class='row-temp'>
+        <div>65</div>
+        <div>38</div>
+      </div>
+      <div class='row-wind'>
+        6.1
+      </div>
+      <div class='row-pop'>
+        0
+      </div>
+      <div class='row-precip'>
+      </div>
+      <div class='row-obvis'>
+      </div>
+    </td>
+    <td>
+      <div class='row-day'>
+        <span class='day'>Thu</span>
+      </div>
+      <div class='row-outlook'>
+        <img class='outlook-img' src='icons/FW.png' alt='FW' title='Few Clouds' />
+      </div>
+      <div class='row-temp'>
+        <div>59</div>
+        <div>45</div>
+      </div>
+      <div class='row-wind'>
+        5.1
+      </div>
+      <div class='row-pop'>
+        5
+      </div>
+      <div class='row-precip'>
+      </div>
+      <div class='row-obvis'>
+      </div>
+    </td>
+    <td>
+      <div class='row-day'>
+        <span class='day'>Fri</span>
+      </div>
+      <div class='row-outlook'>
+        <img class='outlook-img' src='icons/B2.png' alt='B2' title='Considerable Cloudiness' />
+      </div>
+      <div class='row-temp'>
+        <div>52</div>
+        <div>39</div>
+      </div>
+      <div class='row-wind'>
+           N/A
+      </div>
+      <div class='row-pop'>
+        30
+      </div>
+      <div class='row-precip'>
+      <img class='precip-img' src='icons/rainshwrs.png' alt='rainshwrs' title='Rain Showers' /><br/>
+      </div>
+      <div class='row-obvis'>
+      </div>
+    </td>
+    <td class='last-column'>
+      <div class='row-day'>&nbsp;</div>
+      <div class='row-outlook'></div>
+      <div class='row-temp'>
+        <div>&#176;F</div>
+        <div>&#176;F</div>
+      </div>
+      <div class='row-wind'>
+         mph
+      </div>
+      <div class='row-pop'>%</div>
+    </td>
+  </tr>
+</table>
+
+
+
+<!-- report generated in 0.033 s -->
+
+
+</div>
+
+  </div>
+</div>
+
+
+<div id="sunmoon_widget" class="widget">
+  <div class="widget_title">
+    <a href="celestial.html">Celestial</a>
+    <a class="widget_control"
+       onclick="toggle_widget('sunmoon')">&diams;</a>
+  </div>
+  <div class="widget_contents">
+    <div id="celestial_summary">
+      <table class="celestial">
+        <tr><th>&#9728;</th><td></td><td></td><th>&#9789;</th><td></td></tr>
+        <tr>
+          <td class="label">Rise</td>
+          <td class="data">06:42:45 AM</td>
+          <td>&nbsp;</td>
+          <td class="label">Rise</td>
+          <td class="data">02:08:27 PM</td>
+        </tr>
+        <tr>
+          <td class="label">Set</td>
+          <td class="data">05:58:02 PM</td>
+          <td>&nbsp;</td>
+          <td class="label">Set</td>
+          <td class="data">04:15:51 AM</td>
+        </tr>
+        <tr>
+          <td class="label">Daylight</td>
+          <td class="data">11:15</td>
+          <td>&nbsp;</td>
+          <td class="label"></td>
+          <td class="data">Waxing gibbous<br/>
+            83%</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<div id='hilo_widget' class="widget">
+  <div class="widget_title">
+    <a href="statistics.html">High/Low</a>
+    <a class="widget_control"
+      onclick="toggle_widget('hilo')">&diams;</a>
+  </div>
+
+  <div class="widget_contents">
+  <table>
+    <tbody>
+      <tr>
+        <td></td>
+        <th>&nbsp;<br/>Today</th>
+        <th class="hilo_week">&nbsp;<br/>Week</th>
+        <th class="hilo_month">&nbsp;<br/>Month</th>
+        <th class="hilo_year">
+            <a onclick="toggle_rainyear()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>Year</a>
+        </th>
+        <th class="hilo_rainyear">
+            <a onclick="toggle_rainyear()">Rain<br/>Year</a>
+        </th>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="label">Outside Temperature</td>
+        <td class="data new_row hilo_day">
+          <span title="12:04:32 AM">
+            49.5</span><br/>
+          <span title="03:34:52 AM">
+            44.1</span>
+        </td>
+        <td class="data new_row hilo_week">
+          <span title="04:19:09 PM (Monday)">
+            58.3</span><br/>
+          <span title="06:55:00 AM (Sunday)">
+            28.4</span>
+        </td>
+        <td class="data new_row hilo_month">
+          <span title="02/16/2021 02:18:17 AM">
+            66.0</span><br/>
+          <span title="02/21/2021 06:55:00 AM">
+            28.4</span>
+        </td>
+        <td class="data new_row hilo_year">
+          <span title="01/03/2021 02:06:47 PM">
+            70.7</span><br/>
+          <span title="01/30/2021 03:16:02 AM">
+            23.4</span>
+        </td>
+        <td class="data new_row hilo_rainyear">
+          <span title="01/03/2021 02:06:47 PM">
+            70.7</span><br/>
+          <span title="01/30/2021 03:16:02 AM">
+            23.4</span>
+        </td>
+        <td class="units">&#176;F</td>
+      </tr>
+      <tr>
+        <td class="label">Heat Index</td>
+        <td class="data new_row hilo_day">
+          <span title="12:04:32 AM" class="hival">
+            48.8</span>
+        </td>
+        <td class="data new_row hilo_week">
+          <span title="04:21:39 PM (Monday)" class="hival">
+            58.1</span>
+        </td>
+        <td class="data new_row hilo_month">
+          <span title="02/16/2021 02:18:17 AM" class="hival">
+            66.9</span>
+        </td>
+        <td class="data new_row hilo_year">
+          <span title="01/03/2021 02:06:47 PM" class="hival">
+            70.5</span>
+        </td>
+        <td class="data new_row hilo_rainyear">
+          <span title="01/03/2021 02:06:47 PM" class="hival">
+            70.5</span>
+        </td>
+        <td class="units">&#176;F</td>
+      </tr>
+      <tr>
+        <td class="label">Wind Chill</td>
+        <td class="data new_row hilo_day">
+          <span title="05:04:15 AM" class="loval">
+            40.5</span>
+        </td>
+        <td class="data new_row hilo_week">
+          <span title="06:11:35 AM (Sunday)" class="loval">
+            19.9</span>
+        </td>
+        <td class="data new_row hilo_month">
+          <span title="02/21/2021 06:11:35 AM" class="loval">
+            19.9</span>
+        </td>
+        <td class="data new_row hilo_year">
+          <span title="01/29/2021 07:38:25 AM" class="loval">
+            19.1</span>
+        </td>
+        <td class="data new_row hilo_rainyear">
+          <span title="01/29/2021 07:38:25 AM" class="loval">
+            19.1</span>
+        </td>
+        <td class="units">&#176;F</td>
+      </tr>
+      <tr>
+        <td class="label">Dew Point</td>
+        <td class="data new_row hilo_day">
+          <span title="12:04:32 AM">
+            49.0</span><br/>
+          <span title="03:40:00 AM">
+            43.6</span>
+        </td>
+        <td class="data new_row hilo_week">
+          <span title="04:40:25 PM (Monday)">
+            55.9</span><br/>
+          <span title="12:15:45 PM (Sunday)">
+            16.9</span>
+        </td>
+        <td class="data new_row hilo_month">
+          <span title="02/16/2021 02:18:17 AM">
+            65.4</span><br/>
+          <span title="02/04/2021 01:09:20 PM">
+            12.8</span>
+        </td>
+        <td class="data new_row hilo_year">
+          <span title="01/03/2021 06:41:41 AM">
+            66.5</span><br/>
+          <span title="01/30/2021 01:33:18 PM">
+            11.8</span>
+        </td>
+        <td class="data new_row hilo_rainyear">
+          <span title="01/03/2021 06:41:41 AM">
+            66.5</span><br/>
+          <span title="01/30/2021 01:33:18 PM">
+            11.8</span>
+        </td>
+        <td class="units">&#176;F</td>
+      </tr>
+      <tr>
+        <td class="label">Humidity</td>
+        <td class="data new_row hilo_day">
+          <span title="03:48:00 AM">
+            99</span><br/>
+          <span title="12:00:10 AM">
+            98</span>
+        </td>
+        <td class="data new_row hilo_week">
+          <span title="03:48:00 AM (Tuesday)">
+            99</span><br/>
+          <span title="03:51:25 PM (Sunday)">
+            35</span>
+        </td>
+        <td class="data new_row hilo_month">
+          <span title="02/01/2021 12:00:26 AM">
+            99</span><br/>
+          <span title="02/04/2021 01:05:35 PM">
+            22</span>
+        </td>
+        <td class="data new_row hilo_year">
+          <span title="01/01/2021 07:59:07 PM">
+            99</span><br/>
+          <span title="02/04/2021 01:05:35 PM">
+            22</span>
+        </td>
+        <td class="data new_row hilo_rainyear">
+          <span title="01/01/2021 07:59:07 PM">
+            99</span><br/>
+          <span title="02/04/2021 01:05:35 PM">
+            22</span>
+        </td>
+        <td class="units">%</td>
+      </tr>
+      <tr>
+        <td class="label">Barometer</td>
+        <td class="data new_row hilo_day">
+          <span title="06:23:01 AM">
+            29.989</span><br/>
+          <span title="02:48:55 AM">
+            29.897</span>
+        </td>
+        <td class="data new_row hilo_week">
+          <span title="10:29:27 AM (Sunday)">
+            30.651</span><br/>
+          <span title="02:48:55 AM (Tuesday)">
+            29.897</span>
+        </td>
+        <td class="data new_row hilo_month">
+          <span title="02/21/2021 10:29:27 AM">
+            30.651</span><br/>
+          <span title="02/01/2021 06:46:33 PM">
+            29.609</span>
+        </td>
+        <td class="data new_row hilo_year">
+          <span title="02/21/2021 10:29:27 AM">
+            30.651</span><br/>
+          <span title="02/01/2021 06:46:33 PM">
+            29.609</span>
+        </td>
+        <td class="data new_row hilo_rainyear">
+          <span title="02/21/2021 10:29:27 AM">
+            30.651</span><br/>
+          <span title="02/01/2021 06:46:33 PM">
+            29.609</span>
+        </td>
+        <td class="units"> inHg</td>
+      </tr>
+      <tr>
+        <td class="label">Rain</td>
+        <td class="data new_row hilo_day">
+          0.00</td>
+        <td class="data new_row hilo_week">
+          0.50</td>
+        <td class="data new_row hilo_month">
+          8.78</td>
+        <td class="data new_row hilo_year">
+          14.07</td>
+        <td class="data new_row hilo_rainyear">
+          14.07</td>
+        <td class="units"> in</td>
+      </tr>
+      <tr>
+        <td class="label">Rain Rate</td>
+        <td class="data new_row hilo_day">
+          <span title="12:00:02 AM">
+            0.00</span>
+        </td>
+        <td class="data new_row hilo_week">
+          <span title="12:56:55 PM (Monday)">
+            0.44</span>
+        </td>
+        <td class="data new_row hilo_month">
+          <span title="02/19/2021 03:27:24 AM">
+            1.76</span>
+        </td>
+        <td class="data new_row hilo_year">
+          <span title="02/19/2021 03:27:24 AM">
+            1.76</span>
+        </td>
+        <td class="data new_row hilo_rainyear">
+          <span title="02/19/2021 03:27:24 AM">
+            1.76</span>
+        </td>
+        <td class="units"> in/h</td>
+      </tr>
+      <tr>
+        <td class="label">Wind Max</td>
+        <td class="data new_row hilo_day">
+          <span title="12:54:33 AM">
+            8</span><br/>
+             N/A
+        </td>
+        <td class="data new_row hilo_week">
+          <span title="11:52:19 AM (Sunday)">
+            20</span><br/>
+          45
+        </td>
+        <td class="data new_row hilo_month">
+          <span title="02/16/2021 02:17:02 AM">
+            30</span><br/>
+             N/A
+        </td>
+        <td class="data new_row hilo_year">
+          <span title="02/16/2021 02:17:02 AM">
+            30</span><br/>
+             N/A
+        </td>
+        <td class="data new_row hilo_rainyear">
+          <span title="02/16/2021 02:17:02 AM">
+            30</span><br/>
+             N/A
+        </td>
+        <td class="units">
+           mph<br/>
+          &#176;
+        </td>
+      </tr>
+      <tr>
+        <td class="label">Wind Average</td>
+        <td class="data new_row hilo_day">
+          3</td>
+        <td class="data new_row hilo_week">
+          5</td>
+        <td class="data new_row hilo_month">
+          5</td>
+        <td class="data new_row hilo_year">
+          4</td>
+        <td class="data new_row hilo_rainyear">
+          4</td>
+        <td class="units"> mph</td>
+      </tr>
+      <tr>
+        <td class="label">Wind RMS</td>
+        <td class="data new_row hilo_day">
+          3</td>
+        <td class="data new_row hilo_week">
+          5</td>
+        <td class="data new_row hilo_month">
+          6</td>
+        <td class="data new_row hilo_year">
+          5</td>
+        <td class="data new_row hilo_rainyear">
+          5</td>
+        <td class="units"> mph</td>
+      </tr>
+
+      <tr>
+        <td class="label">
+          Vector Average<br/>
+          Average Direction
+        </td>
+        <td class="data new_row hilo_day">
+          3<br/>
+          300
+        </td>
+        <td class="data new_row hilo_week">
+          1<br/>
+          25
+        </td>
+        <td class="data new_row hilo_month">
+          2<br/>
+          4
+        </td>
+        <td class="data new_row hilo_year">
+          1<br/>
+          344
+        </td>
+        <td class="data new_row hilo_rainyear">
+          1<br/>
+          344
+        </td>
+        <td class="units">
+           mph<br/>
+          &#176;
+        </td>
+      </tr>
+
+
+
+
+      <tr>
+        <td class="label">Inside Temperature</td>
+        <td class="data new_row hilo_day">
+          <span title="03:49:59 AM">
+            67.9</span><br/>
+          <span title="04:45:55 AM">
+            64.8</span>
+        </td>
+        <td class="data new_row hilo_week">
+          <span title="12:04:48 PM (Sunday)">
+            72.3</span><br/>
+          <span title="04:08:52 AM (Sunday)">
+            62.6</span>
+        </td>
+        <td class="data new_row hilo_month">
+          <span title="02/07/2021 04:34:49 PM">
+            75.0</span><br/>
+          <span title="02/14/2021 06:03:44 PM">
+            59.8</span>
+        </td>
+        <td class="data new_row hilo_year">
+          <span title="01/09/2021 04:32:46 PM">
+            75.7</span><br/>
+          <span title="02/14/2021 06:03:44 PM">
+            59.8</span>
+        </td>
+        <td class="data new_row hilo_rainyear">
+          <span title="01/09/2021 04:32:46 PM">
+            75.7</span><br/>
+          <span title="02/14/2021 06:03:44 PM">
+            59.8</span>
+        </td>
+        <td class="units">&#176;F</td>
+      </tr>
+
+      <tr>
+        <td class="label">Inside Humidity</td>
+        <td class="data new_row hilo_day">
+          <span title="12:26:56 AM">
+            44</span><br/>
+          <span title="05:31:13 AM">
+            40</span>
+        </td>
+        <td class="data new_row hilo_week">
+          <span title="11:00:26 PM (Monday)">
+            44</span><br/>
+          <span title="07:04:20 AM (Sunday)">
+            32</span>
+        </td>
+        <td class="data new_row hilo_month">
+          <span title="02/16/2021 06:00:40 PM">
+            51</span><br/>
+          <span title="02/04/2021 08:56:50 AM">
+            29</span>
+        </td>
+        <td class="data new_row hilo_year">
+          <span title="01/03/2021 12:51:54 PM">
+            54</span><br/>
+          <span title="01/30/2021 06:19:06 AM">
+            28</span>
+        </td>
+        <td class="data new_row hilo_rainyear">
+          <span title="01/03/2021 12:51:54 PM">
+            54</span><br/>
+          <span title="01/30/2021 06:19:06 AM">
+            28</span>
+        </td>
+        <td class="units">%</td>
+      </tr>
+
+      <tr>
+        <td class="label">Beer Fridge</td>
+        <td class="data new_row hilo_day">
+          <span title="06:19:55 AM">
+            37.0</span><br/>
+          <span title="04:02:03 AM">
+            27.7</span>
+        </td>
+        <td class="data new_row hilo_week">
+          <span title="03:14:20 AM (Sunday)">
+            38.7</span><br/>
+          <span title="06:12:29 PM (Sunday)">
+            25.0</span>
+        </td>
+        <td class="data new_row hilo_month">
+          <span title="02/04/2021 12:45:00 AM">
+            39.2</span><br/>
+          <span title="02/09/2021 07:34:54 AM">
+            24.4</span>
+        </td>
+        <td class="data new_row hilo_year">
+          <span title="02/04/2021 12:45:00 AM">
+            39.2</span><br/>
+          <span title="01/24/2021 11:54:19 AM">
+            19.9</span>
+        </td>
+        <td class="data new_row hilo_rainyear">
+          <span title="02/04/2021 12:45:00 AM">
+            39.2</span><br/>
+          <span title="01/24/2021 11:54:19 AM">
+            19.9</span>
+        </td>
+        <td class="units">&#176;F</td>
+      </tr>
+
+      <tr>
+        <td class="label">Garage</td>
+        <td class="data new_row hilo_day">
+          <span title="12:00:02 AM">
+            62.2</span><br/>
+          <span title="06:22:10 AM">
+            59.2</span>
+        </td>
+        <td class="data new_row hilo_week">
+          <span title="05:41:39 PM (Monday)">
+            65.5</span><br/>
+          <span title="10:11:54 AM (Sunday)">
+            46.4</span>
+        </td>
+        <td class="data new_row hilo_month">
+          <span title="02/16/2021 05:35:00 PM">
+            72.1</span><br/>
+          <span title="02/21/2021 10:11:54 AM">
+            46.4</span>
+        </td>
+        <td class="data new_row hilo_year">
+          <span title="01/02/2021 01:17:20 PM">
+            75.6</span><br/>
+          <span title="01/28/2021 10:44:53 PM">
+            -33.5</span>
+        </td>
+        <td class="data new_row hilo_rainyear">
+          <span title="01/02/2021 01:17:20 PM">
+            75.6</span><br/>
+          <span title="01/28/2021 10:44:53 PM">
+            -33.5</span>
+        </td>
+        <td class="units">&#176;F</td>
+      </tr>
+
+      <tr>
+        <td class="label">Nursery</td>
+        <td class="data new_row hilo_day">
+          <span title="05:30:24 AM">
+            67.5</span><br/>
+          <span title="05:08:51 AM">
+            63.0</span>
+        </td>
+        <td class="data new_row hilo_week">
+          <span title="02:30:16 PM (Sunday)">
+            72.3</span><br/>
+          <span title="01:05:00 AM (Monday)">
+            62.1</span>
+        </td>
+        <td class="data new_row hilo_month">
+          <span title="02/14/2021 07:09:46 PM">
+            77.0</span><br/>
+          <span title="02/14/2021 05:50:00 PM">
+            58.1</span>
+        </td>
+        <td class="data new_row hilo_year">
+          <span title="02/14/2021 07:09:46 PM">
+            77.0</span><br/>
+          <span title="02/14/2021 05:50:00 PM">
+            58.1</span>
+        </td>
+        <td class="data new_row hilo_rainyear">
+          <span title="02/14/2021 07:09:46 PM">
+            77.0</span><br/>
+          <span title="02/14/2021 05:50:00 PM">
+            58.1</span>
+        </td>
+        <td class="units">&#176;F</td>
+      </tr>
+
+      <tr>
+        <td class="label">Main Fridge</td>
+        <td class="data new_row hilo_day">
+          <span title="12:08:07 AM">
+            34.7</span><br/>
+          <span title="05:52:04 AM">
+            33.1</span>
+        </td>
+        <td class="data new_row hilo_week">
+          <span title="07:27:33 PM (Monday)">
+            38.8</span><br/>
+          <span title="05:52:04 AM (Tuesday)">
+            33.1</span>
+        </td>
+        <td class="data new_row hilo_month">
+          <span title="02/07/2021 05:10:53 PM">
+            40.8</span><br/>
+          <span title="02/15/2021 11:25:07 AM">
+            32.4</span>
+        </td>
+        <td class="data new_row hilo_year">
+          <span title="01/17/2021 07:26:18 PM">
+            42.1</span><br/>
+          <span title="01/08/2021 07:06:39 AM">
+            30.4</span>
+        </td>
+        <td class="data new_row hilo_rainyear">
+          <span title="01/17/2021 07:26:18 PM">
+            42.1</span><br/>
+          <span title="01/08/2021 07:06:39 AM">
+            30.4</span>
+        </td>
+        <td class="units">&#176;F</td>
+      </tr>
+
+      <tr>
+        <td class="label">Lightning Tower</td>
+        <td class="data new_row hilo_day">
+          <span title="12:02:40 AM">
+            50.0</span><br/>
+          <span title="04:35:00 AM">
+            44.6</span>
+        </td>
+        <td class="data new_row hilo_week">
+          <span title="03:49:37 PM (Sunday)">
+            58.6</span><br/>
+          <span title="06:50:00 AM (Sunday)">
+            28.9</span>
+        </td>
+        <td class="data new_row hilo_month">
+          <span title="02/16/2021 04:19:15 PM">
+            70.0</span><br/>
+          <span title="02/21/2021 06:50:00 AM">
+            28.9</span>
+        </td>
+        <td class="data new_row hilo_year">
+          <span title="01/03/2021 03:17:42 PM">
+            89.2</span><br/>
+          <span title="01/30/2021 03:51:26 AM">
+            26.6</span>
+        </td>
+        <td class="data new_row hilo_rainyear">
+          <span title="01/03/2021 03:17:42 PM">
+            89.2</span><br/>
+          <span title="01/30/2021 03:51:26 AM">
+            26.6</span>
+        </td>
+        <td class="units">&#176;F</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div id='sensors_widget' class="widget">
+  <div class="widget_title">
+    <a href="telemetry.html">Sensor Status</a>
+    <a class="widget_control"
+      onclick="toggle_widget('sensors')">&diams;</a>
+  </div>
+  <div class="widget_contents">
+  <table>
+
+
+    <tr><th>Battery Status</th><th></th></tr>
+    <tr>
+      <td class="label">Outside Temperature Battery</td>
+      <td class="data"><span class="status_ok">OK</span>
+</td>
+    </tr>
+    <tr>
+      <td class="label">Beer Fridge Battery</td>
+      <td class="data"><span class="status_low">LOW</span>
+</td>
+    </tr>
+    <tr>
+      <td class="label">Garage Battery</td>
+      <td class="data"><span class="status_ok">OK</span>
+</td>
+    </tr>
+    <tr>
+      <td class="label">Nursery Battery</td>
+      <td class="data"><span class="status_ok">OK</span>
+</td>
+    </tr>
+    <tr>
+      <td class="label">Main Fridge Battery</td>
+      <td class="data"><span class="status_ok">OK</span>
+</td>
+    </tr>
+    <tr>
+      <td class="label">Lightning Battery</td>
+      <td class="data"><span class="status_ok">OK</span>
+</td>
+    </tr>
+
+  </table>
+  </div>
+
+</div>
+
+<div id='about_widget' class="widget">
+  <div class="widget_title">
+    About this weather station
+    <a class="widget_control"
+      onclick="toggle_widget('about')">&diams;</a>
+  </div>
+  <div class="widget_contents">
+  <table>
+    <tr>
+      <td class="label">Hardware</td>
+      <td class="data">SDR</td>
+    </tr>
+    <tr>
+      <td class="label">Latitude</td>
+      <td class="data">34&deg; 44.60' N</td>
+    </tr>
+    <tr>
+      <td class="label">Longitude</td>
+      <td class="data">076&deg; 43.23' W</td>
+    </tr>
+    <tr>
+      <td class="label">Altitude</td>
+      <td class="data">8 feet</td>
+    </tr>
+    <tr>
+      <td class="label">Server uptime</td>
+      <td class="data">75 days, 18 hours, 30 minutes</td>
+    </tr>
+    <tr>
+      <td class="label">WeeWX uptime</td>
+      <td class="data">16 days, 17 hours, 7 minutes</td>
+    </tr>
+    <tr>
+      <td class="label">WeeWX version</td>
+      <td class="data">4.4.0</td>
+    </tr>
+  </table>
+  </div>
+
+</div>
+
+<div id='radar_widget' class="widget">
+  <div class="widget_title">
+    Radar
+    <a class="widget_control"
+      onclick="toggle_widget('radar')">&diams;</a>
+  </div>
+
+  <div class="widget_contents">
+    <iframe width="415" height="300" src="https://embed.windy.com/embed2.html?lat=34.836&lon=-76.869&detailLat=34.722&detailLon=-76.754&width=415&height=300&zoom=8&level=surface&overlay=radar&product=radar&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=mph&metricTemp=%C2%B0F&radarRange=-1" frameborder="0"></iframe>
+  </div>
+</div>
+
+<div id='satellite_widget' class="widget">
+  <div class="widget_title">
+    Satellite
+    <a class="widget_control"
+      onclick="toggle_widget('satellite')">&diams;</a>
+  </div>
+
+  <div class="widget_contents">
+    <a href="https://www.wunderground.com/maps/satellite/regional-infrared/usaec">
+      <img src="https://s.w-x.co/staticmaps/wu/wu/satir1200_cur/usaec/animate.png" alt="Satellite" />
+    </a>
+  </div>
+</div>
+
+      </div>
+
+      <div id="plot_group">
+        <div id="history_widget" class="widget">
+          <div id="plot_title" class="widget_title">History:&nbsp;&nbsp;
+            <a class="button_selected" id="button_history_day"
+               onclick="choose_history('day')">Day</a>
+            <a class="button" id="button_history_week"
+               onclick="choose_history('week')">Week</a>
+            <a class="button" id="button_history_month"
+               onclick="choose_history('month')">Month</a>
+            <a class="button" id="button_history_year"
+               onclick="choose_history('year')">Year</a>
+          </div>
+          <div id="history_day" class="plot_container">
+            <img src="daybarometer.png" alt="Barometer"/>
+            <img src="daytempdew.png"   alt="Outside Temperature" />
+            <img src="daytempfeel.png"  alt="feel" />
+            <img src="dayhum.png"       alt="Humidity" />
+            <img src="daywind.png"      alt="Wind Speed" />
+            <img src="daywinddir.png"   alt="Wind Direction" />
+            <img src="daywindvec.png"   alt="Wind Vector" />
+            <img src="dayrain.png"      alt="Rain" />
+            <img src="daytempin.png"    alt="Inside Temperature" />
+            <img src="dayhumin.png"    alt="Inside Humidity" />
+            <img src="daytemp.png"      alt="Garage" />
+            <img src="daytemp1.png"      alt="Beer Fridge" />
+            <img src="daylightning.png"        alt="Strikes Today"/>
+          </div>
+          <div id="history_week" class="plot_container" style="display:none">
+            <img src="weekbarometer.png" alt="Barometer"/>
+            <img src="weektempdew.png"   alt="Outside Temperature" />
+            <img src="weektempfeel.png"  alt="feel" />
+            <img src="weekhum.png"       alt="Humidity" />
+            <img src="weekwind.png"      alt="Wind Speed" />
+            <img src="weekwinddir.png"   alt="Wind Direction" />
+            <img src="weekwindvec.png"   alt="Wind Vector" />
+            <img src="weekrain.png"      alt="Rain" />
+            <img src="weektempin.png"    alt="Inside Temperature" />
+            <img src="weekhumin.png"    alt="Inside Humidity" />
+            <img src="weektemp.png"      alt="Garage" />
+            <img src="weektemp1.png"      alt="Beer Fridge" />
+            <img src="weeklightning.png"        alt="Strikes Today"/>
+          </div>
+          <div id="history_month" class="plot_container" style="display:none">
+            <img src="monthbarometer.png" alt="Barometer"/>
+            <img src="monthtempdew.png"   alt="Outside Temperature" />
+            <img src="monthtempfeel.png"  alt="feel" />
+            <img src="monthhum.png"       alt="Humidity" />
+            <img src="monthwind.png"      alt="Wind Speed" />
+            <img src="monthwinddir.png"   alt="Wind Direction" />
+            <img src="monthwindvec.png"   alt="Wind Vector" />
+            <img src="monthrain.png"      alt="Rain" />
+            <img src="monthtempin.png"    alt="Inside Temperature" />
+            <img src="monthhumin.png"    alt="Inside Humidity" />
+            <img src="monthtemp.png"      alt="Garage" />
+            <img src="monthtemp1.png"      alt="Beer Fridge" />
+            <img src="monthlightning.png"        alt="Strikes Today"/>
+          </div>
+          <div id="history_year" class="plot_container" style="display:none">
+            <img src="yearbarometer.png" alt="Barometer"/>
+            <img src="yeartempdew.png"   alt="Outside Temperature" />
+            <img src="yeartempfeel.png"  alt="feel" />
+            <img src="yearhum.png"       alt="Humidity" />
+            <img src="yearwind.png"      alt="Wind Speed" />
+            <img src="yearwinddir.png"   alt="Wind Direction" />
+            <img src="yearwindvec.png"   alt="Wind Vector" />
+            <img src="yearrain.png"      alt="Rain" />
+            <img src="yeartempin.png"    alt="Inside Temperature" />
+            <img src="yearhumin.png"    alt="Inside Humidity" />
+            <img src="yeartemp.png"      alt="Garage" />
+            <img src="yeartemp1.png"      alt="Beer Fridge" />
+            <img src="yearlightning.png"        alt="Strikes Today"/>
+          </div>
+        </div>
+      </div>
     </div>
 
-		</div><!-- close div tag from header.html.tmpl -->
+    <p class="footnote">
+      This station is controlled by <a href="http://weewx.com/">WeeWX</a>, an
+      experimental weather software system written in Python.
+    </p>
 
-		<footer class="site-footer">
-			<div class="wrap">
-                <div class="row">
-                    <div class="col-sm-4 footerLeft">
-                        Copyright &copy; 2021 My Weather Website
-                    </div>
-                    <div class="col-sm-5 footerCenter">
-                        <strong>Never make important decisions from this website.</strong>
-                    </div>
-                    <div class="col-sm-3 footerRight">
-                        weewx theme by <a href="https://obrienlabs.net" target="_blank">Pat O'Brien</a>
-                    </div>
-                </div>
-			</div>
-		</footer>
-		
-		<script type='text/javascript' src='./js/responsive-menu.js'></script>
-		
-		<!-- Belchertown Skin Version: 1.2 -->
-        <!-- Page Generated: 02/22/2021 02:25:00 PM -->
 
-    </body>
+
+
+</body>
+
 </html>

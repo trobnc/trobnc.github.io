@@ -1,0 +1,425 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <title>Forecast Sampler: Table</title>
+  <link rel='stylesheet' type='text/css' href='forecast.css'/>
+  <link rel='stylesheet' type='text/css' href='forecast_table.css' />
+</head>
+<body>
+
+<h1>Forecast Table</h1>
+<p>
+Display forecast data in a table format by including the table template.
+</p>
+
+
+<div class='fc_table'>
+
+
+
+
+
+
+
+
+
+
+
+
+<script type='text/javascript'>
+function toggle_hours(control, id) {
+  elem = document.getElementById(id + '.hours');
+  if(elem) {
+    if(elem.style.display != 'none') {
+      elem.style.display = 'none';
+    } else {
+      elem.style.display = 'inline';
+    }
+  }
+}
+</script>
+
+
+
+
+
+
+  <div class='legend'>
+    <table>
+      <tr>
+        <td class='col-date'></td>
+        <td class='col-outlook'></td>
+        <td class='col-temp'><img src='icons/thermometer-red.png' class='legend-img' alt='T' title='temperature' /><br/><span class='units'>&#176;F</span></td>
+        <td class='col-wind' style='text-align:center'><img src='icons/flag.png' class='legend-img' alt='W' title='wind' /><br/><span class='units'> mph</span></td>
+        <td class='col-tides'><img src='icons/water.png' class='legend-img' alt='tide' title='tides' /><br/><span class='units'> feet</span></td>
+        <td class='col-pop'><img src='icons/pop.png' class='legend-img' alt='PoP' title='probability of precipitation' /><br/><span class='units'> in</span></td>
+        <td class='col-precip'></td>
+        <td class='col-obvis'></td>
+      </tr>
+    </table>
+  </div>
+
+
+
+
+  <div id='WU.2021.02.23' class='summary'>
+    <table>
+      <tr>
+        <td class='col-date' onclick="toggle_hours(this, 'WU.2021.02.23')">
+          <span class='day'>Tue</span><br/>
+          <span class='date'>23 Feb</span>
+        </td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/FW.png' alt='FW' title='Few Clouds' />
+        </td>
+        <td class='col-temp'><span class='temphi'>58</span><br/><span class='templo'>42</span></td>
+        <td class='col-wind'
+            style='vertical-align:middle; text-align:center; background: url()
+            ,url(icons/W.png)
+            ,url(icons/NW.png)
+            ; background-repeat:no-repeat; background-position:center; background-size:48px;'
+            >
+          11-16
+          <span class='windgust'> </span>
+        </td>
+        <td class='col-tides'>
+          <table cellspacing='0' cellpadding='0' width='100%'>
+            <tr>
+              <td style='font-size:100%'>04:46</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.1</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>11:23</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>0.3</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>17:02</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>2.2</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>22:57</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>0.0</td>
+            </tr>
+          </table>
+        </td>
+        <td class='col-pop'>
+          4%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  
+
+
+
+
+
+
+  <div id='WU.2021.02.24' class='summary'>
+    <table>
+      <tr>
+        <td class='col-date' onclick="toggle_hours(this, 'WU.2021.02.24')">
+          <span class='day'>Wed</span><br/>
+          <span class='date'>24 Feb</span>
+        </td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/FW.png' alt='FW' title='Few Clouds' />
+        </td>
+        <td class='col-temp'><span class='temphi'>62</span><br/><span class='templo'>48</span></td>
+        <td class='col-wind'
+            style='vertical-align:middle; text-align:center; background: url()
+            ,url(icons/S.png)
+            ,url(icons/SW.png)
+            ; background-repeat:no-repeat; background-position:center; background-size:48px;'
+            >
+          12-13
+          <span class='windgust'> </span>
+        </td>
+        <td class='col-tides'>
+          <table cellspacing='0' cellpadding='0' width='100%'>
+            <tr>
+              <td style='font-size:100%'>05:35</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.3</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>12:07</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>0.1</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>17:50</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>2.4</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>23:48</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.2</td>
+            </tr>
+          </table>
+        </td>
+        <td class='col-pop'>
+          4%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  
+
+
+
+
+
+
+  <div id='WU.2021.02.25' class='summary'>
+    <table>
+      <tr>
+        <td class='col-date' onclick="toggle_hours(this, 'WU.2021.02.25')">
+          <span class='day'>Thu</span><br/>
+          <span class='date'>25 Feb</span>
+        </td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/FW.png' alt='FW' title='Few Clouds' />
+        </td>
+        <td class='col-temp'><span class='temphi'>58</span><br/><span class='templo'>42</span></td>
+        <td class='col-wind'
+            style='vertical-align:middle; text-align:center; background: url()
+            ,url(icons/NE.png)
+            ,url(icons/NE.png)
+            ; background-repeat:no-repeat; background-position:center; background-size:48px;'
+            >
+          10-12
+          <span class='windgust'> </span>
+        </td>
+        <td class='col-tides'>
+          <table cellspacing='0' cellpadding='0' width='100%'>
+            <tr>
+              <td style='font-size:100%'>06:20</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.5</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>12:48</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.1</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>18:36</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>2.7</td>
+            </tr>
+          </table>
+        </td>
+        <td class='col-pop'>
+          23%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+         <img class='precip-img' src='icons/rain.png' alt='rain' title='Rain' />
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  
+
+
+
+
+
+
+  <div id='WU.2021.02.26' class='summary'>
+    <table>
+      <tr>
+        <td class='col-date' onclick="toggle_hours(this, 'WU.2021.02.26')">
+          <span class='day'>Fri</span><br/>
+          <span class='date'>26 Feb</span>
+        </td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/OV.png' alt='OV' title='Overcast' />
+        </td>
+        <td class='col-temp'><span class='temphi'>58</span><br/><span class='templo'>48</span></td>
+        <td class='col-wind'
+            style='vertical-align:middle; text-align:center; background: url()
+            ,url(icons/NE.png)
+            ,url(icons/SE.png)
+            ; background-repeat:no-repeat; background-position:center; background-size:48px;'
+            >
+          12-15
+          <span class='windgust'> </span>
+        </td>
+        <td class='col-tides'>
+          <table cellspacing='0' cellpadding='0' width='100%'>
+            <tr>
+              <td style='font-size:100%'>00:36</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.5</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>07:04</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.6</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>13:27</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.4</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>19:20</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.0</td>
+            </tr>
+          </table>
+        </td>
+        <td class='col-pop'>
+          68%
+<br/>
+          0.31 <img class='pop-img' src='icons/raindrop.png' />
+<br/>
+        </td>
+        <td class='col-precip'>
+         <img class='precip-img' src='icons/rain.png' alt='rain' title='Rain' />
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  
+
+
+
+
+
+
+  <div id='WU.2021.02.27' class='summary'>
+    <table>
+      <tr>
+        <td class='col-date' onclick="toggle_hours(this, 'WU.2021.02.27')">
+          <span class='day'>Sat</span><br/>
+          <span class='date'>27 Feb</span>
+        </td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/B1.png' alt='B1' title='Mostly Cloudy' />
+        </td>
+        <td class='col-temp'><span class='temphi'>60</span><br/><span class='templo'>48</span></td>
+        <td class='col-wind'
+            style='vertical-align:middle; text-align:center; background: url()
+            ,url(icons/SW.png)
+            ,url(icons/NW.png)
+            ; background-repeat:no-repeat; background-position:center; background-size:48px;'
+            >
+          7-12
+          <span class='windgust'> </span>
+        </td>
+        <td class='col-tides'>
+          <table cellspacing='0' cellpadding='0' width='100%'>
+            <tr>
+              <td style='font-size:100%'>01:24</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.7</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>07:46</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.7</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>14:06</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.5</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>20:04</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.2</td>
+            </tr>
+          </table>
+        </td>
+        <td class='col-pop'>
+          43%
+<br/>
+          0.02 <img class='pop-img' src='icons/raindrop.png' />
+<br/>
+        </td>
+        <td class='col-precip'>
+         <img class='precip-img' src='icons/rain.png' alt='rain' title='Rain' />
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  
+
+
+
+
+
+
+  <div id='WU.2021.02.28' class='summary'>
+    <table>
+      <tr>
+        <td class='col-date' onclick="toggle_hours(this, 'WU.2021.02.28')">
+          <span class='day'>Sun</span><br/>
+          <span class='date'>28 Feb</span>
+        </td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/OV.png' alt='OV' title='Overcast' />
+        </td>
+        <td class='col-temp'><span class='temphi'>59</span><br/><span class='templo'>48</span></td>
+        <td class='col-wind'
+            style='vertical-align:middle; text-align:center; background: url()
+            ,url(icons/NE.png)
+            ,url(icons/S.png)
+            ; background-repeat:no-repeat; background-position:center; background-size:48px;'
+            >
+          9-10
+          <span class='windgust'> </span>
+        </td>
+        <td class='col-tides'>
+          <table cellspacing='0' cellpadding='0' width='100%'>
+            <tr>
+              <td style='font-size:100%'>02:12</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.8</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>08:29</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.7</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>14:46</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.7</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>20:50</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.4</td>
+            </tr>
+          </table>
+        </td>
+        <td class='col-pop'>
+          63%
+<br/>
+          0.31 <img class='pop-img' src='icons/raindrop.png' />
+<br/>
+        </td>
+        <td class='col-precip'>
+         <img class='precip-img' src='icons/rain.png' alt='rain' title='Rain' />
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  
+
+
+
+
+
+
+  <div class='sources'>
+    <p>
+      WU forecast
+ for geocode=34.743313,-76.720492
+ issued on 23-Feb-2021 03:40.
+      <br/>Tides for Morehead City Harbor, North Carolina issued on 16-Feb-2021 08:00
+     <br/>Report generated in 0.176 seconds.
+    </p>
+  </div>
+
+
+</div>
+
+</body>
+</html>

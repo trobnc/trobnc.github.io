@@ -1,0 +1,467 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+    <head >
+        <meta charset="UTF-8" />
+        <title>Morehead City, NC Weather Conditions</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <meta name="description" content="Weather conditions for Morehead City, NC as observed by a personal weather station and the weewx weather software"/>
+        <meta name="robots" content="noodp"/>
+        <link rel="canonical" href="https://www.pwsweather.com/station/pws/KNCMOREH15" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Morehead City, NC Weather Conditions" />
+        <meta property="og:description" content="Weather conditions for Morehead City, NC as observed by a personal weather station and the weewx weather software" />
+        <meta property="og:url" content="https://www.pwsweather.com/station/pws/KNCMOREH15" />
+        <meta property="og:site_name" content="Morehead City, NC Weather Conditions" />
+
+        <link rel='dns-prefetch' href='//code.highcharts.com' />
+        <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+        <link rel='dns-prefetch' href='//stackpath.bootstrapcdn.com' />
+        <link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+
+        <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Roboto%3A300%2C400%2C700&#038;ver=1.0' type='text/css' media='all' />
+        <link rel='stylesheet' href='//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css?ver=4.7.4' type='text/css' media='all' />
+        <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <link rel='stylesheet' href='//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='../style.css?ver=1614079533' type='text/css' media='all' id="belchertownStyle" />
+        <link rel='stylesheet' href='../belchertown-dark.min.css?ver=1614079533' type='text/css' media='all' id="belchertownStyle" />
+        
+        <link rel="manifest" href="../manifest.json" crossorigin="use-credentials">
+        <link rel="apple-touch-icon" href="../images/station.png">
+        <link rel="apple-touch-icon" sizes="48x48" href="../images/station48.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../images/station72.png">
+        <link rel="apple-touch-icon" sizes="96x96" href="../images/station96.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="../images/station144.png">
+        <link rel="apple-touch-icon" sizes="168x168" href="../images/station168.png">
+        <link rel="apple-touch-icon" sizes="192x192" href="../images/station192.png">
+        
+        <!--[if lt IE 9]>
+        <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js'></script>
+        <![endif]-->
+        <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+        <script type='text/javascript' src='//code.highcharts.com/stock/highstock.js'></script>
+        <script type='text/javascript' src='//code.highcharts.com/highcharts-more.js'></script>
+        <script type='text/javascript' src='//code.highcharts.com/modules/exporting.js'></script>
+        <script type='text/javascript' src='//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'></script>
+        <script type='text/javascript' src='../js/belchertown.js?1614079533'></script>
+        <script>
+            // Set the session variables for the theme
+            if ( sessionStorage.getItem('theme') === null ) {
+                sessionStorage.setItem('theme', 'dark');
+            }
+            if ( sessionStorage.getItem('currentTheme') === null ) {
+                sessionStorage.setItem('currentTheme', 'dark');
+            }
+        </script>
+        
+        <link rel='shortlink' href="https://www.pwsweather.com/station/pws/KNCMOREH15" />
+                
+        <link rel="icon" href="../favicon.ico" />
+        
+
+
+    </head>
+    
+    <body class="page-template-default page full-width-content dark" itemscope itemtype="https://schema.org/WebPage">
+        <div class="site-container">
+            <header class="site-header">
+                <div class="wrap">
+                    <div class="title-area">
+                        <p class="site-title" itemprop="headline">
+                            <a href="../">
+                                <img src="https://moreheadcitync.org/ImageRepository/Document?documentID=460" id="logo_image" title="Morehead City, NC Weather Conditions" alt="Morehead City, NC Weather Conditions">
+                            </a>
+                        </p>
+                    </div>
+                    <div class="widget-area header-widget-area">
+                        <section id="nav_menu">
+                            <div class="widget-wrap">
+                                <nav class="nav-header" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                                    <ul id="menu-menu" class="menu genesis-nav-menu">
+                                        <!-- class = current-menu-item -->
+                                        <li class="menu-item menu-item-home"><a href=".." itemprop="url"><span itemprop="name">Home</span></a></li>
+                                        <li class="menu-item menu-item-1"><a href="../graphs" itemprop="url"><span itemprop="name">Graphs</span></a></li>
+                                        <li class="menu-item menu-item-2"><a href="../records" itemprop="url"><span itemprop="name">Records</span></a></li>
+                                        <li class="menu-item menu-item-3"><a href="../reports" itemprop="url"><span itemprop="name">Reports</span></a></li>
+                                        <li class="menu-item menu-item-4"><a href="../about" itemprop="url"><span itemprop="name">About</span></a></li>
+                                        <label class="themeSwitchLabel">
+                                            <input type="checkbox" id="themeSwitch" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </header>
+
+    <script type="text/javascript">
+        var moment_locale = "en-US";
+        moment.locale(moment_locale);
+        
+        jQuery(document).ready(function() {
+            jQuery("#year-outtemp-max-ts").text( moment.unix(1609700807).utcOffset(-300.0).format( "LLL" ) );
+            jQuery("#at-outtemp-max-ts").text( moment.unix(1599241621).utcOffset(-300.0).format( "LLL" ) );
+            
+            jQuery("#year-outtemp-min-ts").text( moment.unix(1611994562).utcOffset(-300.0).format( "LLL" ) );
+            jQuery("#at-outtemp-min-ts").text( moment.unix(1611994562).utcOffset(-300.0).format( "LLL" ) );
+            
+            jQuery("#year-apptemp-max-ts").text( moment.unix(1609700807).utcOffset(-300.0).format( "LLL" ) );
+            jQuery("#year-apptemp-min-ts").text( moment.unix(1611923905).utcOffset(-300.0).format( "LLL" ) );
+            jQuery("#at-apptemp-max-ts").text( moment.unix(1599145789).utcOffset(-300.0).format( "LLL" ) );
+            jQuery("#at-apptemp-min-ts").text( moment.unix(1608984801).utcOffset(-300.0).format( "LLL" ) );
+            
+            jQuery("#year-heatindex-max-ts").text( moment.unix(1609700807).utcOffset(-300.0).format( "LLL" ) );
+            jQuery("#at-heatindex-max-ts").text( moment.unix(1599145789).utcOffset(-300.0).format( "LLL" ) );
+            
+            jQuery("#year-windchill-min-ts").text( moment.unix(1611923905).utcOffset(-300.0).format( "LLL" ) );
+            jQuery("#at-windchill-min-ts").text( moment.unix(1611923905).utcOffset(-300.0).format( "LLL" ) );
+            
+            jQuery("#year-outtemp-range-max-ts").text( moment.unix(1610686800).utcOffset(-300.0).format( "LL" ) );
+            jQuery("#at-outtemp-range-max-ts").text( moment.unix(1607058000).utcOffset(-300.0).format( "LL" ) );
+            
+            jQuery("#year-outtemp-range-min-ts").text( moment.unix(1613278800).utcOffset(-300.0).format( "LL" ) );
+            jQuery("#at-outtemp-range-min-ts").text( moment.unix(1601784000).utcOffset(-300.0).format( "LL" ) );
+            
+            jQuery("#year-windGust-max-ts").text( moment.unix(1613460000).utcOffset(-300.0).format( "LLL" ) );
+            jQuery("#at-windGust-max-ts").text( moment.unix(1596521700).utcOffset(-300.0).format( "LLL" ) );
+            
+            jQuery("#year-windrun-max-ts").text( moment.unix(1613608500).utcOffset(-300.0).format( "LL" ) );
+            jQuery("#at-windrun-max-ts").text( moment.unix(1592361600).utcOffset(-300.0).format( "LL" ) );
+            
+            jQuery("#year-rainiest-day-ts").text( moment.unix(1613710800).utcOffset(-300.0).format( "LL" ) );
+            jQuery("#at-rainiest-day-ts").text( moment.unix(1606712400).utcOffset(-300.0).format( "LL" ) );
+            
+            jQuery("#year-rainRate-max-ts").text( moment.unix(1613723244).utcOffset(-300.0).format( "LLL" ) );
+            jQuery("#at-rainRate-max-ts").text( moment.unix(1597843200).utcOffset(-300.0).format( "LLL" ) );
+            
+            jQuery("#year-outHumidity-max-ts").text( moment.unix(1609549147).utcOffset(-300.0).format( "LLL" ) );
+            jQuery("#at-outHumidity-max-ts").text( moment.unix(1592010911).utcOffset(-300.0).format( "LLL" ) );
+            
+            jQuery("#year-outHumidity-min-ts").text( moment.unix(1612461935).utcOffset(-300.0).format( "LLL" ) );
+            jQuery("#at-outHumidity-min-ts").text( moment.unix(1612461935).utcOffset(-300.0).format( "LLL" ) );
+            
+            jQuery("#year-dewpoint-max-ts").text( moment.unix(1609674101).utcOffset(-300.0).format( "LLL" ) );
+            jQuery("#at-dewpoint-max-ts").text( moment.unix(1599151248).utcOffset(-300.0).format( "LLL" ) );
+            
+            jQuery("#year-dewpoint-min-ts").text( moment.unix(1612031598).utcOffset(-300.0).format( "LLL" ) );
+            jQuery("#at-dewpoint-min-ts").text( moment.unix(1612031598).utcOffset(-300.0).format( "LLL" ) );
+            
+            jQuery("#year-barometer-max-ts").text( moment.unix(1613921367).utcOffset(-300.0).format( "LLL" ) );
+            jQuery("#at-barometer-max-ts").text( moment.unix(1613921367).utcOffset(-300.0).format( "LLL" ) );
+            
+            jQuery("#year-barometer-min-ts").text( moment.unix(1612223193).utcOffset(-300.0).format( "LLL" ) );
+            jQuery("#at-barometer-min-ts").text( moment.unix(1604042400).utcOffset(-300.0).format( "LLL" ) );
+            
+            
+            
+            jQuery("#year-days-with-rainfall-ts").text( moment.unix(1613710800).utcOffset(-300.0).format( "LL" ) );
+            // Take the number of days (9) and multiply by 86400 (seconds in a day) to get total seconds. Then subtract from the end epoch to give you the epoch "days ago"
+            // Removed the year with ", YYYY, or "/YYYY" or ".YYYY" or "-YYYY"
+            if (1613710800 > 0) {
+                var start_day_epoch = 1613710800 - (9 * 86400);
+                //jQuery("#at-days-with-rainfall-range-ts").text( moment.unix(start_day_epoch).utcOffset(-300.0).format('LL').replace(/([A-Z])|[, \/\-\.]+\b[0-9]{4}\b/g, '$1') + " - " + moment.unix(1613710800).utcOffset(-300.0).format('LL') );
+                jQuery("#at-days-with-rainfall-range-ts").text( moment.unix(start_day_epoch).utcOffset(-300.0).format('MMMM DD') + " - " + moment.unix(1613710800).utcOffset(-300.0).format('LL') );
+            } else {
+                jQuery("#at-days-with-rainfall-range-ts").text("---");
+            }
+
+            jQuery("#year-days-without-rainfall-ts").text( moment.unix(1611464400).utcOffset(-300.0).format( "LL" ) );
+            // Take the number of days (9) and multiply by 86400 (seconds in a day) to get total seconds. Then subtract from the end epoch to give you the epoch "days ago"
+            // Removed the year with ", YYYY, or "/YYYY" or ".YYYY" or "-YYYY"
+            if (1611464400 > 0) {
+                var start_day_epoch = 1611464400 - (8 * 86400);
+                //jQuery("#at-days-without-rainfall-range-ts").text( moment.unix(start_day_epoch).utcOffset(-300.0).format('LL').replace(/([A-Z])|[, \/\-\.]+\b[0-9]{4}\b/g, '$1') + " - " + moment.unix(1611464400).utcOffset(-300.0).format('LL') );
+                jQuery("#at-days-without-rainfall-range-ts").text( moment.unix(start_day_epoch).utcOffset(-300.0).format('MMMM DD') + " - " + moment.unix(1611464400).utcOffset(-300.0).format('LL') );
+            } else {
+                jQuery("#at-days-without-rainfall-range-ts").text("---");
+            }
+            
+
+        });
+    </script>
+
+    <div class="site-inner">
+        <main class="content">
+            <article class="weewx records" itemscope itemtype="https://schema.org/CreativeWork">
+
+<div class="wx-stn-info-container">
+    <div class="row">
+        <div class="col-sm-1 wx-stn-info-current-obs">
+            <span class="obs-header-icon">
+                <img id="wxicon" src="../images/cloudy.png">
+            </span>
+            <span class="obs-header-outtemp">44.8 &#176;F</span>
+        </div>
+        <div class="col-sm-5">
+            <div class="wx-stn-name">
+                <h1>Weather Observation Records</h1>
+            </div>
+        </div>
+        <div class="col-sm-5" style="float:right;">
+            <div class="wx-stn-info">
+                Observations are powered by an Acurite 5n1 Pro
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+                <!-- Begin row -->
+                <div class="row">
+                    <div class="col-sm-12 wx-records-description">
+                    </div>
+                </div>
+                <!-- End row -->
+
+                <!-- Records table row -->
+                <div class="row records-table">
+                    <table class="table-striped">
+                        <tbody>
+                            <tr>
+                                <td class="records-header" colspan=5>Temperature Records</td>
+                            </tr>
+                            <tr>
+                                <td colspan=1> </td>
+                                <td class="records-header-year" colspan=2>2021</td>
+                                <td class="records-header-alltime" colspan=2>All Time</td>
+                            </tr>
+                            <tr>
+                                <td>Highest Temperature</td>
+                                <td class="leftborder">70.7 &#176;F</td>
+                                <td><span id="year-outtemp-max-ts"></span></td><!-- moment.js -->
+                                <td class="leftborder"><span id="at-outtemp-max-ts"></span></td><!-- moment.js -->
+                                <td>97.3 &#176;F</td>
+                            </tr>
+                            <tr>
+                                <td>Lowest Temperature</td>
+                                <td class="leftborder">23.4 &#176;F</td>
+                                <td id="year-outtemp-min-ts"></td><!-- moment.js -->
+                                <td class="leftborder" id="at-outtemp-min-ts"></td><!-- moment.js -->
+                                <td>23.4 &#176;F</td>
+                            </tr>
+                            <tr>
+                                <td>Highest Apparent Temperature</td>
+                                <td class="leftborder">71.9 &#176;F</td>
+                                <td id="year-apptemp-max-ts"></td><!-- moment.js -->
+                                <td class="leftborder" id="at-apptemp-max-ts"></td><!-- moment.js -->
+                                <td>112.4 &#176;F</td>
+                            </tr>
+                            <tr>
+                                <td>Lowest Apparent Temperature</td>
+                                <td class="leftborder">17.7 &#176;F</td>
+                                <td id="year-apptemp-min-ts"></td><!-- moment.js -->
+                                <td class="leftborder" id="at-apptemp-min-ts"></td><!-- moment.js -->
+                                <td>17.6 &#176;F</td>
+                            </tr>
+                            <tr>
+                                <td>Highest Heat Index</td>
+                                <td class="leftborder">70.5 &#176;F</td>
+                                <td id="year-heatindex-max-ts"></td><!-- moment.js -->
+                                <td class="leftborder" id="at-heatindex-max-ts"></td><!-- moment.js -->
+                                <td>130.0 &#176;F</td>
+                            </tr>
+                            <tr>
+                                <td>Lowest Wind Chill</td>
+                                <td class="leftborder">19.1 &#176;F</td>
+                                <td id="year-windchill-min-ts"></td><!-- moment.js -->
+                                <td class="leftborder" id="at-windchill-min-ts"></td><!-- moment.js -->
+                                <td>19.1 &#176;F</td>
+                            </tr>
+                            <tr>
+                                <td>Largest Daily Temperature Range</td>
+                                <td class="leftborder">29.2  &#176;F</td>
+                                <td><span id="year-outtemp-range-max-ts"></span><br>(Min: 33.8  &#176;F - Max: 63  &#176;F )</td><!-- moment.js -->
+                                <td class="leftborder"><span id="at-outtemp-range-max-ts"></span><br>(Min: 39.9  &#176;F - Max: 72  &#176;F )</td><!-- moment.js -->
+                                <td>32.1  &#176;F</td>
+                            </tr>
+                            <tr>
+                                <td>Smallest Daily Temperature Range</td>
+                                <td class="leftborder">4.1  &#176;F</td>
+                                <td><span id="year-outtemp-range-min-ts"></span><br>(Min: 39.6  &#176;F - Max: 43.7  &#176;F )</td><!-- moment.js -->
+                                <td class="leftborder"><span id="at-outtemp-range-min-ts"></span><br>(Min: 63  &#176;F - Max: 65.8  &#176;F )</td><!-- moment.js -->
+                                <td>2.8  &#176;F</td>
+                            </tr>
+
+                            <tr>
+                                <td class="records-header" colspan=5>Wind Records</td>
+                            </tr>
+                            <tr>
+                                <td colspan=1> </td>
+                                <td class="records-header-year" colspan=2>2021</td>
+                                <td class="records-header-alltime" colspan=2>All Time</td>
+                            </tr>
+                            <tr>
+                                <td>Strongest Wind Gust</td>
+                                <td class="leftborder">30 mph</td>
+                                <td id="year-windGust-max-ts"></td><!-- moment.js -->
+                                <td class="leftborder" id="at-windGust-max-ts"></td><!-- moment.js -->
+                                <td>36 mph</td>
+                            </tr>
+                            <tr>
+                                <td>Highest Daily Wind Run</td>
+                                <td class="leftborder">190.0 miles</td>
+                                <td id="year-windrun-max-ts"></td><!-- moment.js -->
+                                <td class="leftborder" id="at-windrun-max-ts"></td><!-- moment.js -->
+                                <td>316.1 miles</td>
+                            </tr>
+                            <tr>
+                                <td class="records-header" colspan=5>Rain Records</td>
+                            </tr>
+                            <tr>
+                                <td colspan=1> </td>
+                                <td class="records-header-year" colspan=2>2021</td>
+                                <td class="records-header-alltime" colspan=2>All Time</td>
+                            </tr>
+                            <tr>
+                                <td>Highest Daily Rainfall</td>
+                                <td class="leftborder">2.61  in</td>
+                                <td id="year-rainiest-day-ts"></td><!-- moment.js -->
+                                <td class="leftborder" id="at-rainiest-day-ts"></td><!-- moment.js -->
+                                <td>3.24  in</td>
+                            </tr>
+                            <tr>
+                                <td>Highest Daily Rain Rate</td>
+                                <td class="leftborder">1.76 in/hr</td>
+                                <td id="year-rainRate-max-ts"></td><!-- moment.js -->
+                                <td class="leftborder" id="at-rainRate-max-ts"></td><!-- moment.js -->
+                                <td>3.94 in/hr</td>
+                            </tr>
+                            <tr>
+                                <td>Month with Highest Total Rainfall</td>
+                                <td class="leftborder">8.78  in</td>
+                                <td>February</td>
+                                <td class="leftborder">February, 2021</td>
+                                <td>8.78  in</td>
+                            </tr>
+                            <tr>
+                                <td>Total Rainfall for</td>
+                                <td class="leftborder">2021</td>
+                                <td>14.07 in</td>
+                                <td class="leftborder">2020</td>
+                                <td>35.65  in</td>
+                            </tr>
+                            <tr>
+                                <td>Consecutive Days With Rain</td>
+                                <td class="leftborder">9 days</td>
+                                <td>ending <span id="year-days-with-rainfall-ts"></span></td><!-- moment.js -->
+                                <td class="leftborder">9 days</td>
+                                <td id="at-days-with-rainfall-range-ts"></td><!-- moment.js -->
+                            </tr>
+                            <tr>
+                                <td>Consecutive Days Without Rain</td>
+                                <td class="leftborder">8 days</td>
+                                <td>ending <span id="year-days-without-rainfall-ts"></span></td><!-- moment.js -->
+                                <td class="leftborder">8 days</td>
+                                <td id="at-days-without-rainfall-range-ts"></td><!-- moment.js -->
+                            </tr>
+
+                            <tr>
+                                <td class="records-header" colspan=5>Humidity Records</td>
+                            </tr>
+                            <tr>
+                                <td colspan=1> </td>
+                                <td class="records-header-year" colspan=2>2021</td>
+                                <td class="records-header-alltime" colspan=2>All Time</td>
+                            </tr>
+                            <tr>
+                                <td>Highest Humidity</td>
+                                <td class="leftborder">99%</td>
+                                <td id="year-outHumidity-max-ts"></td><!-- moment.js -->
+                                <td class="leftborder" id="at-outHumidity-max-ts"></td><!-- moment.js -->
+                                <td>99%</td>
+                            </tr>
+                            <tr>
+                                <td>Lowest Humidity</td>
+                                <td class="leftborder">22%</td>
+                                <td id="year-outHumidity-min-ts"></td><!-- moment.js -->
+                                <td class="leftborder" id="at-outHumidity-min-ts"></td><!-- moment.js -->
+                                <td>22%</td>
+                            </tr>
+                            <tr>
+                                <td>Highest Dewpoint</td>
+                                <td class="leftborder">66.5 &#176;F</td>
+                                <td id="year-dewpoint-max-ts"></td><!-- moment.js -->
+                                <td class="leftborder" id="at-dewpoint-max-ts"></td><!-- moment.js -->
+                                <td>86.4 &#176;F</td>
+                            </tr>
+                            <tr>
+                                <td>Lowest Dewpoint</td>
+                                <td class="leftborder">11.8 &#176;F</td>
+                                <td id="year-dewpoint-min-ts"></td><!-- moment.js -->
+                                <td class="leftborder" id="at-dewpoint-min-ts"></td><!-- moment.js -->
+                                <td>11.8 &#176;F</td>
+                            </tr>
+
+                            <tr>
+                                <td class="records-header" colspan=5>Barometer Records</td>
+                            </tr>
+                            <tr>
+                                <td colspan=1> </td>
+                                <td class="records-header-year" colspan=2>2021</td>
+                                <td class="records-header-alltime" colspan=2>All Time</td>
+                            </tr>
+                            <tr>
+                                <td>Highest Barometer</td>
+                                <td class="leftborder">30.651 inHg</td>
+                                <td id="year-barometer-max-ts"></td><!-- moment.js -->
+                                <td class="leftborder" id="at-barometer-max-ts"></td><!-- moment.js -->
+                                <td>30.651 inHg</td>
+                            </tr>
+                            <tr>
+                                <td>Lowest Barometer</td>
+                                <td class="leftborder">29.609 inHg</td>
+                                <td id="year-barometer-min-ts"></td><!-- moment.js -->
+                                <td class="leftborder" id="at-barometer-min-ts"></td><!-- moment.js -->
+                                <td>29.538 inHg</td>
+                            </tr>
+
+                                          
+                            <!-- Add new table entries -->
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <!-- End records table row -->
+
+            </article>
+        </div>
+    </div>
+
+
+		</div><!-- close div tag from header.html.tmpl -->
+
+		<footer class="site-footer">
+			<div class="wrap">
+                <div class="row">
+                    <div class="col-sm-4 footerLeft">
+                        Copyright &copy; 2021 My Weather Website
+                    </div>
+                    <div class="col-sm-5 footerCenter">
+                        <strong>Never make important decisions from this website.</strong>
+                    </div>
+                    <div class="col-sm-3 footerRight">
+                        weewx theme by <a href="https://obrienlabs.net" target="_blank">Pat O'Brien</a>
+                    </div>
+                </div>
+			</div>
+		</footer>
+		
+		<script type='text/javascript' src='../js/responsive-menu.js'></script>
+		
+		<!-- Belchertown Skin Version: 1.2 -->
+        <!-- Page Generated: 02/23/2021 06:25:00 AM -->
+
+    </body>
+</html>

@@ -1,0 +1,3736 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <title>Forecast Sampler: Multiple Tables</title>
+  <link rel='stylesheet' type='text/css' href='forecast.css'/>
+  <link rel='stylesheet' type='text/css' href='forecast_table.css' />
+</head>
+<body>
+
+<h1>Forecast Table</h1>
+<p>
+Display forecast data in multiple tables, one table for each forecast source.
+</p>
+
+
+<h2>Weather Underground</h2>
+
+<div class='fc_table'>
+
+
+
+
+
+
+
+
+
+
+
+
+<script type='text/javascript'>
+function toggle_hours(control, id) {
+  elem = document.getElementById(id + '.hours');
+  if(elem) {
+    if(elem.style.display != 'none') {
+      elem.style.display = 'none';
+    } else {
+      elem.style.display = 'inline';
+    }
+  }
+}
+</script>
+
+
+
+
+
+
+  <div class='legend'>
+    <table>
+      <tr>
+        <td class='col-date'></td>
+        <td class='col-outlook'></td>
+        <td class='col-temp'><img src='icons/thermometer-red.png' class='legend-img' alt='T' title='temperature' /><br/><span class='units'>&#176;F</span></td>
+        <td class='col-dewpoint'><img src='icons/thermometer-dewpoint.png' class='legend-img' alt='D' title='dewpoint' /><br/><span class='units'>&#176;F</span></td>
+        <td class='col-wind' style='text-align:center'><img src='icons/flag.png' class='legend-img' alt='W' title='wind' /><br/><span class='units'> mph</span></td>
+        <td class='col-tides'><img src='icons/water.png' class='legend-img' alt='tide' title='tides' /><br/><span class='units'> feet</span></td>
+        <td class='col-sun'><img src='icons/sunriseset.png' class='legend-img' alt='S' title='sun' /><br/></td>
+        <td class='col-moon'><img src='icons/moonriseset.png' class='legend-img' alt='M' title='moon' /><br/></td>
+        <td class='col-moonphase'><img src='icons/moonphase.png' class='legend-img' alt='MP' title='moon phase' /><br/></td>
+        <td class='col-pop'><img src='icons/pop.png' class='legend-img' alt='PoP' title='probability of precipitation' /><br/><span class='units'> in</span></td>
+        <td class='col-precip'></td>
+        <td class='col-obvis'></td>
+      </tr>
+    </table>
+  </div>
+
+
+
+
+  <div id='WU.2021.02.23' class='summary'>
+    <table>
+      <tr>
+        <td class='col-date' onclick="toggle_hours(this, 'WU.2021.02.23')">
+          <span class='day'>Tue</span><br/>
+          <span class='date'>23 Feb</span>
+        </td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/FW.png' alt='FW' title='Few Clouds' />
+        </td>
+        <td class='col-temp'><span class='temphi'>58</span><br/><span class='templo'>42</span></td>
+        <td class='col-dewpoint'>   N/A<br/>   N/A</td>
+        <td class='col-wind'
+            style='vertical-align:middle; text-align:center; background: url()
+            ,url(icons/W.png)
+            ,url(icons/NW.png)
+            ; background-repeat:no-repeat; background-position:center; background-size:48px;'
+            >
+          11-16
+          <span class='windgust'> </span>
+        </td>
+        <td class='col-tides'>
+          <table cellspacing='0' cellpadding='0' width='100%'>
+            <tr>
+              <td style='font-size:100%'>04:46</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.1</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>11:23</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>0.3</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>17:02</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>2.2</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>22:57</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>0.0</td>
+            </tr>
+          </table>
+        </td>
+        <td class='col-sun'>
+          06:42:51 AM<br/>
+          05:57:56 PM
+        </td>
+        <td class='col-moon'>
+          02:08:34 PM<br/>
+          04:15:44 AM
+        </td>
+        <td class='col-moonphase'>
+          83%
+        </td>
+        <td class='col-pop'>
+          4%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div id='WU.2021.02.23.hours' class='period' style='display:none'>
+    <table>
+  
+
+      <tr>
+        <td class='col-date'>07:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/FW.png' alt='FW' title='Few Clouds' />
+        </td>
+        <td class='col-temp'>58</td>
+        <td class='col-dewpoint'>   N/A</td>
+        <td class='col-wind'
+          background='icons/W.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          16 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           11:23 L 0.3
+           17:02 H 2.2
+        </td>
+        <td class='col-sun'>
+          05:57:56 PM
+        </td>
+        <td class='col-moon'>
+          02:08:34 PM
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+          3%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>19:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/FWn.png' alt='FW' title='Few Clouds' />
+        </td>
+        <td class='col-temp'>42</td>
+        <td class='col-dewpoint'>   N/A</td>
+        <td class='col-wind'
+          background='icons/NW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          11 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           22:57 L 0.0
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+          4%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+
+  <div id='WU.2021.02.24' class='summary'>
+    <table>
+      <tr>
+        <td class='col-date' onclick="toggle_hours(this, 'WU.2021.02.24')">
+          <span class='day'>Wed</span><br/>
+          <span class='date'>24 Feb</span>
+        </td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/FW.png' alt='FW' title='Few Clouds' />
+        </td>
+        <td class='col-temp'><span class='temphi'>62</span><br/><span class='templo'>48</span></td>
+        <td class='col-dewpoint'>   N/A<br/>   N/A</td>
+        <td class='col-wind'
+            style='vertical-align:middle; text-align:center; background: url()
+            ,url(icons/S.png)
+            ,url(icons/SW.png)
+            ; background-repeat:no-repeat; background-position:center; background-size:48px;'
+            >
+          12-13
+          <span class='windgust'> </span>
+        </td>
+        <td class='col-tides'>
+          <table cellspacing='0' cellpadding='0' width='100%'>
+            <tr>
+              <td style='font-size:100%'>05:35</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.3</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>12:07</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>0.1</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>17:50</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>2.4</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>23:48</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.2</td>
+            </tr>
+          </table>
+        </td>
+        <td class='col-sun'>
+          06:41:39 AM<br/>
+          05:58:50 PM
+        </td>
+        <td class='col-moon'>
+          03:10:13 PM<br/>
+          05:05:56 AM
+        </td>
+        <td class='col-moonphase'>
+          90%
+        </td>
+        <td class='col-pop'>
+          4%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div id='WU.2021.02.24.hours' class='period' style='display:none'>
+    <table>
+  
+
+      <tr>
+        <td class='col-date'>07:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/FW.png' alt='FW' title='Few Clouds' />
+        </td>
+        <td class='col-temp'>62</td>
+        <td class='col-dewpoint'>   N/A</td>
+        <td class='col-wind'
+          background='icons/S.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          13 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           12:07 L 0.1
+           17:50 H 2.4
+        </td>
+        <td class='col-sun'>
+          05:58:50 PM
+        </td>
+        <td class='col-moon'>
+          03:10:13 PM
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+          4%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>19:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CLn.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>48</td>
+        <td class='col-dewpoint'>   N/A</td>
+        <td class='col-wind'
+          background='icons/SW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          12 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           23:48 L -0.2
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+          3%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+
+  <div id='WU.2021.02.25' class='summary'>
+    <table>
+      <tr>
+        <td class='col-date' onclick="toggle_hours(this, 'WU.2021.02.25')">
+          <span class='day'>Thu</span><br/>
+          <span class='date'>25 Feb</span>
+        </td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/FW.png' alt='FW' title='Few Clouds' />
+        </td>
+        <td class='col-temp'><span class='temphi'>58</span><br/><span class='templo'>42</span></td>
+        <td class='col-dewpoint'>   N/A<br/>   N/A</td>
+        <td class='col-wind'
+            style='vertical-align:middle; text-align:center; background: url()
+            ,url(icons/NE.png)
+            ,url(icons/NE.png)
+            ; background-repeat:no-repeat; background-position:center; background-size:48px;'
+            >
+          10-12
+          <span class='windgust'> </span>
+        </td>
+        <td class='col-tides'>
+          <table cellspacing='0' cellpadding='0' width='100%'>
+            <tr>
+              <td style='font-size:100%'>06:20</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.5</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>12:48</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.1</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>18:36</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>2.7</td>
+            </tr>
+          </table>
+        </td>
+        <td class='col-sun'>
+          06:40:26 AM<br/>
+          05:59:44 PM
+        </td>
+        <td class='col-moon'>
+          04:16:08 PM<br/>
+          05:51:18 AM
+        </td>
+        <td class='col-moonphase'>
+          96%
+        </td>
+        <td class='col-pop'>
+          23%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+         <img class='precip-img' src='icons/rain.png' alt='rain' title='Rain' />
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div id='WU.2021.02.25.hours' class='period' style='display:none'>
+    <table>
+  
+
+      <tr>
+        <td class='col-date'>07:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/FW.png' alt='FW' title='Few Clouds' />
+        </td>
+        <td class='col-temp'>56</td>
+        <td class='col-dewpoint'>   N/A</td>
+        <td class='col-wind'
+          background='icons/NE.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          12 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           12:48 L -0.1
+           18:36 H 2.7
+        </td>
+        <td class='col-sun'>
+          05:59:44 PM
+        </td>
+        <td class='col-moon'>
+          04:16:08 PM
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+          3%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>19:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/B1n.png' alt='B1' title='Mostly Cloudy' />
+        </td>
+        <td class='col-temp'>42</td>
+        <td class='col-dewpoint'>   N/A</td>
+        <td class='col-wind'
+          background='icons/NE.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          10 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+          23%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          <td>
+            <img class='precip-img' src='icons/rain.png' alt='rain' title='Rain' />
+            <br/>
+            <20%
+          </td>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+
+  <div id='WU.2021.02.26' class='summary'>
+    <table>
+      <tr>
+        <td class='col-date' onclick="toggle_hours(this, 'WU.2021.02.26')">
+          <span class='day'>Fri</span><br/>
+          <span class='date'>26 Feb</span>
+        </td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/OV.png' alt='OV' title='Overcast' />
+        </td>
+        <td class='col-temp'><span class='temphi'>58</span><br/><span class='templo'>48</span></td>
+        <td class='col-dewpoint'>   N/A<br/>   N/A</td>
+        <td class='col-wind'
+            style='vertical-align:middle; text-align:center; background: url()
+            ,url(icons/NE.png)
+            ,url(icons/SE.png)
+            ; background-repeat:no-repeat; background-position:center; background-size:48px;'
+            >
+          12-15
+          <span class='windgust'> </span>
+        </td>
+        <td class='col-tides'>
+          <table cellspacing='0' cellpadding='0' width='100%'>
+            <tr>
+              <td style='font-size:100%'>00:36</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.5</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>07:04</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.6</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>13:27</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.4</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>19:20</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.0</td>
+            </tr>
+          </table>
+        </td>
+        <td class='col-sun'>
+          06:39:13 AM<br/>
+          06:00:37 PM
+        </td>
+        <td class='col-moon'>
+          05:24:19 PM<br/>
+          06:31:54 AM
+        </td>
+        <td class='col-moonphase'>
+          99%
+        </td>
+        <td class='col-pop'>
+          68%
+<br/>
+          0.31 <img class='pop-img' src='icons/raindrop.png' />
+<br/>
+        </td>
+        <td class='col-precip'>
+         <img class='precip-img' src='icons/rain.png' alt='rain' title='Rain' />
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div id='WU.2021.02.26.hours' class='period' style='display:none'>
+    <table>
+  
+
+      <tr>
+        <td class='col-date'>07:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/OV.png' alt='OV' title='Overcast' />
+        </td>
+        <td class='col-temp'>53</td>
+        <td class='col-dewpoint'>   N/A</td>
+        <td class='col-wind'
+          background='icons/NE.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          15 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           07:04 H 3.6
+           13:27 L -0.4
+        </td>
+        <td class='col-sun'>
+          06:00:37 PM
+        </td>
+        <td class='col-moon'>
+          05:24:19 PM
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+          64%
+<br/>
+          0.07 <img class='pop-img' src='icons/raindrop.png' />
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          <td>
+            <img class='precip-img' src='icons/rain.png' alt='rain' title='Rain' />
+            <br/>
+            60-70%
+          </td>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>19:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/OVn.png' alt='OV' title='Overcast' />
+        </td>
+        <td class='col-temp'>51</td>
+        <td class='col-dewpoint'>   N/A</td>
+        <td class='col-wind'
+          background='icons/SE.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          12 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           19:20 H 3.0
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+          68%
+<br/>
+          0.24 <img class='pop-img' src='icons/raindrop.png' />
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          <td>
+            <img class='precip-img' src='icons/rain.png' alt='rain' title='Rain' />
+            <br/>
+            60-70%
+          </td>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+
+  <div id='WU.2021.02.27' class='summary'>
+    <table>
+      <tr>
+        <td class='col-date' onclick="toggle_hours(this, 'WU.2021.02.27')">
+          <span class='day'>Sat</span><br/>
+          <span class='date'>27 Feb</span>
+        </td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/B1.png' alt='B1' title='Mostly Cloudy' />
+        </td>
+        <td class='col-temp'><span class='temphi'>60</span><br/><span class='templo'>48</span></td>
+        <td class='col-dewpoint'>   N/A<br/>   N/A</td>
+        <td class='col-wind'
+            style='vertical-align:middle; text-align:center; background: url()
+            ,url(icons/SW.png)
+            ,url(icons/NW.png)
+            ; background-repeat:no-repeat; background-position:center; background-size:48px;'
+            >
+          7-12
+          <span class='windgust'> </span>
+        </td>
+        <td class='col-tides'>
+          <table cellspacing='0' cellpadding='0' width='100%'>
+            <tr>
+              <td style='font-size:100%'>01:24</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.7</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>07:46</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.7</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>14:06</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.5</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>20:04</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.2</td>
+            </tr>
+          </table>
+        </td>
+        <td class='col-sun'>
+          06:37:58 AM<br/>
+          06:01:31 PM
+        </td>
+        <td class='col-moon'>
+          06:33:16 PM<br/>
+          07:08:32 AM
+        </td>
+        <td class='col-moonphase'>
+          100%
+        </td>
+        <td class='col-pop'>
+          43%
+<br/>
+          0.02 <img class='pop-img' src='icons/raindrop.png' />
+<br/>
+        </td>
+        <td class='col-precip'>
+         <img class='precip-img' src='icons/rain.png' alt='rain' title='Rain' />
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div id='WU.2021.02.27.hours' class='period' style='display:none'>
+    <table>
+  
+
+      <tr>
+        <td class='col-date'>07:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/B1.png' alt='B1' title='Mostly Cloudy' />
+        </td>
+        <td class='col-temp'>60</td>
+        <td class='col-dewpoint'>   N/A</td>
+        <td class='col-wind'
+          background='icons/SW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          12 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           07:46 H 3.7
+           14:06 L -0.5
+        </td>
+        <td class='col-sun'>
+          06:01:31 PM
+        </td>
+        <td class='col-moon'>
+          06:33:16 PM
+          07:08:32 AM
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+          43%
+<br/>
+          0.02 <img class='pop-img' src='icons/raindrop.png' />
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          <td>
+            <img class='precip-img' src='icons/rain.png' alt='rain' title='Rain' />
+            <br/>
+            30-50%
+          </td>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>19:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/B1n.png' alt='B1' title='Mostly Cloudy' />
+        </td>
+        <td class='col-temp'>49</td>
+        <td class='col-dewpoint'>   N/A</td>
+        <td class='col-wind'
+          background='icons/NW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          7 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           20:04 H 3.2
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+          24%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          <td>
+            <img class='precip-img' src='icons/rain.png' alt='rain' title='Rain' />
+            <br/>
+            <20%
+          </td>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+
+  <div id='WU.2021.02.28' class='summary'>
+    <table>
+      <tr>
+        <td class='col-date' onclick="toggle_hours(this, 'WU.2021.02.28')">
+          <span class='day'>Sun</span><br/>
+          <span class='date'>28 Feb</span>
+        </td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/OV.png' alt='OV' title='Overcast' />
+        </td>
+        <td class='col-temp'><span class='temphi'>59</span><br/><span class='templo'>48</span></td>
+        <td class='col-dewpoint'>   N/A<br/>   N/A</td>
+        <td class='col-wind'
+            style='vertical-align:middle; text-align:center; background: url()
+            ,url(icons/NE.png)
+            ,url(icons/S.png)
+            ; background-repeat:no-repeat; background-position:center; background-size:48px;'
+            >
+          9-10
+          <span class='windgust'> </span>
+        </td>
+        <td class='col-tides'>
+          <table cellspacing='0' cellpadding='0' width='100%'>
+            <tr>
+              <td style='font-size:100%'>02:12</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.8</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>08:29</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.7</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>14:46</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.7</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>20:50</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.4</td>
+            </tr>
+          </table>
+        </td>
+        <td class='col-sun'>
+          06:36:43 AM<br/>
+          06:02:23 PM
+        </td>
+        <td class='col-moon'>
+          07:42:20 PM<br/>
+          07:42:25 AM
+        </td>
+        <td class='col-moonphase'>
+          98%
+        </td>
+        <td class='col-pop'>
+          63%
+<br/>
+          0.31 <img class='pop-img' src='icons/raindrop.png' />
+<br/>
+        </td>
+        <td class='col-precip'>
+         <img class='precip-img' src='icons/rain.png' alt='rain' title='Rain' />
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div id='WU.2021.02.28.hours' class='period' style='display:none'>
+    <table>
+  
+
+      <tr>
+        <td class='col-date'>07:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/OV.png' alt='OV' title='Overcast' />
+        </td>
+        <td class='col-temp'>59</td>
+        <td class='col-dewpoint'>   N/A</td>
+        <td class='col-wind'
+          background='icons/NE.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          10 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           08:29 H 3.7
+           14:46 L -0.7
+        </td>
+        <td class='col-sun'>
+          06:02:23 PM
+        </td>
+        <td class='col-moon'>
+          07:42:25 AM
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+          56%
+<br/>
+          0.17 <img class='pop-img' src='icons/raindrop.png' />
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          <td>
+            <img class='precip-img' src='icons/rain.png' alt='rain' title='Rain' />
+            <br/>
+            30-50%
+          </td>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>19:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/OVn.png' alt='OV' title='Overcast' />
+        </td>
+        <td class='col-temp'>53</td>
+        <td class='col-dewpoint'>   N/A</td>
+        <td class='col-wind'
+          background='icons/S.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          9 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           20:50 H 3.4
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+          07:42:20 PM
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+          63%
+<br/>
+          0.14 <img class='pop-img' src='icons/raindrop.png' />
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          <td>
+            <img class='precip-img' src='icons/rain.png' alt='rain' title='Rain' />
+            <br/>
+            60-70%
+          </td>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+
+  <div class='sources'>
+    <p>
+      WU forecast
+ for geocode=34.743313,-76.720492
+ issued on 23-Feb-2021 03:40.
+      <br/>Tides for Morehead City Harbor, North Carolina issued on 16-Feb-2021 08:00
+     <br/>Report generated in 0.333 seconds.
+    </p>
+  </div>
+
+
+</div>
+
+<h2>NWS</h2>
+
+<div class='fc_table'>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class='legend'>
+    <table>
+      <tr>
+        <td class='col-date'></td>
+        <td class='col-outlook'></td>
+        <td class='col-temp'><img src='icons/thermometer-red.png' class='legend-img' alt='T' title='temperature' /><br/><span class='units'>&#176;F</span></td>
+        <td class='col-dewpoint'><img src='icons/thermometer-dewpoint.png' class='legend-img' alt='D' title='dewpoint' /><br/><span class='units'>&#176;F</span></td>
+        <td class='col-wind' style='text-align:center'><img src='icons/flag.png' class='legend-img' alt='W' title='wind' /><br/><span class='units'> mph</span></td>
+        <td class='col-tides'><img src='icons/water.png' class='legend-img' alt='tide' title='tides' /><br/><span class='units'> feet</span></td>
+        <td class='col-sun'><img src='icons/sunriseset.png' class='legend-img' alt='S' title='sun' /><br/></td>
+        <td class='col-moon'><img src='icons/moonriseset.png' class='legend-img' alt='M' title='moon' /><br/></td>
+        <td class='col-moonphase'><img src='icons/moonphase.png' class='legend-img' alt='MP' title='moon phase' /><br/></td>
+        <td class='col-pop'><img src='icons/pop.png' class='legend-img' alt='PoP' title='probability of precipitation' /><br/><span class='units'> in</span></td>
+        <td class='col-precip'></td>
+        <td class='col-obvis'></td>
+      </tr>
+    </table>
+  </div>
+
+
+
+
+  <div id='NWS.2021.02.23' class='summary'>
+    <table>
+      <tr>
+        <td class='col-date' onclick="toggle_hours(this, 'NWS.2021.02.23')">
+          <span class='day'>Tue</span><br/>
+          <span class='date'>23 Feb</span>
+        </td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CL.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'><span class='temphi'>62</span><br/><span class='templo'>40</span></td>
+        <td class='col-dewpoint'>44<br/>39</td>
+        <td class='col-wind'
+            style='vertical-align:middle; text-align:center; background: url()
+            ,url(icons/NW.png)
+            ,url(icons/W.png)
+            ,url(icons/SW.png)
+            ; background-repeat:no-repeat; background-position:center; background-size:48px;'
+            >
+          4-12
+          <span class='windgust'> </span>
+        </td>
+        <td class='col-tides'>
+          <table cellspacing='0' cellpadding='0' width='100%'>
+            <tr>
+              <td style='font-size:100%'>04:46</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.1</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>11:23</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>0.3</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>17:02</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>2.2</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>22:57</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>0.0</td>
+            </tr>
+          </table>
+        </td>
+        <td class='col-sun'>
+          06:42:51 AM<br/>
+          05:57:56 PM
+        </td>
+        <td class='col-moon'>
+          02:08:34 PM<br/>
+          04:15:44 AM
+        </td>
+        <td class='col-moonphase'>
+          83%
+        </td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div id='NWS.2021.02.23.hours' class='period' style='display:none'>
+    <table>
+  
+
+      <tr>
+        <td class='col-date'>07:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/SC.png' alt='SC' title='Scattered' />
+        </td>
+        <td class='col-temp'>40</td>
+        <td class='col-dewpoint'>39</td>
+        <td class='col-wind'
+          background='icons/NW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          4 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>10:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/FW.png' alt='FW' title='Few Clouds' />
+        </td>
+        <td class='col-temp'>52</td>
+        <td class='col-dewpoint'>40</td>
+        <td class='col-wind'
+          background='icons/W.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          6 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           11:23 L 0.3
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>13:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CL.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>60</td>
+        <td class='col-dewpoint'>40</td>
+        <td class='col-wind'
+          background='icons/W.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          11 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+          02:08:34 PM
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>16:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CL.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>60</td>
+        <td class='col-dewpoint'>44</td>
+        <td class='col-wind'
+          background='icons/SW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          12 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           17:02 H 2.2
+        </td>
+        <td class='col-sun'>
+          05:57:56 PM
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>19:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CLn.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>51</td>
+        <td class='col-dewpoint'>43</td>
+        <td class='col-wind'
+          background='icons/W.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          5 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>22:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CLn.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>46</td>
+        <td class='col-dewpoint'>43</td>
+        <td class='col-wind'
+          background='icons/W.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          4 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           22:57 L 0.0
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+
+  <div id='NWS.2021.02.24' class='summary'>
+    <table>
+      <tr>
+        <td class='col-date' onclick="toggle_hours(this, 'NWS.2021.02.24')">
+          <span class='day'>Wed</span><br/>
+          <span class='date'>24 Feb</span>
+        </td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CL.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'><span class='temphi'>65</span><br/><span class='templo'>38</span></td>
+        <td class='col-dewpoint'>47<br/>39</td>
+        <td class='col-wind'
+            style='vertical-align:middle; text-align:center; background: url()
+            ,url(icons/W.png)
+            ,url(icons/NW.png)
+            ,url(icons/N.png)
+            ,url(icons/S.png)
+            ,url(icons/SW.png)
+            ; background-repeat:no-repeat; background-position:center; background-size:48px;'
+            >
+          2-11
+          <span class='windgust'>17</span>
+        </td>
+        <td class='col-tides'>
+          <table cellspacing='0' cellpadding='0' width='100%'>
+            <tr>
+              <td style='font-size:100%'>05:35</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.3</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>12:07</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>0.1</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>17:50</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>2.4</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>23:48</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.2</td>
+            </tr>
+          </table>
+        </td>
+        <td class='col-sun'>
+          06:41:39 AM<br/>
+          05:58:50 PM
+        </td>
+        <td class='col-moon'>
+          03:10:13 PM<br/>
+          05:05:56 AM
+        </td>
+        <td class='col-moonphase'>
+          89%
+        </td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div id='NWS.2021.02.24.hours' class='period' style='display:none'>
+    <table>
+  
+
+      <tr>
+        <td class='col-date'>01:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CLn.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>43</td>
+        <td class='col-dewpoint'>41</td>
+        <td class='col-wind'
+          background='icons/W.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          3 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>04:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CLn.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>41</td>
+        <td class='col-dewpoint'>39</td>
+        <td class='col-wind'
+          background='icons/NW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          2 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           05:35 H 3.3
+        </td>
+        <td class='col-sun'>
+          06:41:39 AM
+        </td>
+        <td class='col-moon'>
+          05:05:56 AM
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>07:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/FW.png' alt='FW' title='Few Clouds' />
+        </td>
+        <td class='col-temp'>40</td>
+        <td class='col-dewpoint'>39</td>
+        <td class='col-wind'
+          background='icons/N.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          2 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>10:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/FW.png' alt='FW' title='Few Clouds' />
+        </td>
+        <td class='col-temp'>54</td>
+        <td class='col-dewpoint'>43</td>
+        <td class='col-wind'
+          background='icons/S.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          4 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           12:07 L 0.1
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>13:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/FW.png' alt='FW' title='Few Clouds' />
+        </td>
+        <td class='col-temp'>62</td>
+        <td class='col-dewpoint'>46</td>
+        <td class='col-wind'
+          background='icons/S.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          10 <span class='windgust'>16</span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+          03:10:13 PM
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>16:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CL.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>63</td>
+        <td class='col-dewpoint'>47</td>
+        <td class='col-wind'
+          background='icons/SW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          11 <span class='windgust'>17</span><br/>
+        </td>
+        <td class='col-tides'>
+           17:50 H 2.4
+        </td>
+        <td class='col-sun'>
+          05:58:50 PM
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>19:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CLn.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>56</td>
+        <td class='col-dewpoint'>47</td>
+        <td class='col-wind'
+          background='icons/SW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          9 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>22:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CLn.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>52</td>
+        <td class='col-dewpoint'>46</td>
+        <td class='col-wind'
+          background='icons/SW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          8 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           23:48 L -0.2
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+
+  <div id='NWS.2021.02.25' class='summary'>
+    <table>
+      <tr>
+        <td class='col-date' onclick="toggle_hours(this, 'NWS.2021.02.25')">
+          <span class='day'>Thu</span><br/>
+          <span class='date'>25 Feb</span>
+        </td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/FW.png' alt='FW' title='Few Clouds' />
+        </td>
+        <td class='col-temp'><span class='temphi'>59</span><br/><span class='templo'>45</span></td>
+        <td class='col-dewpoint'>44<br/>39</td>
+        <td class='col-wind'
+            style='vertical-align:middle; text-align:center; background: url()
+            ,url(icons/SW.png)
+            ,url(icons/W.png)
+            ,url(icons/N.png)
+            ,url(icons/NE.png)
+            ; background-repeat:no-repeat; background-position:center; background-size:48px;'
+            >
+          4-6
+          <span class='windgust'> </span>
+        </td>
+        <td class='col-tides'>
+          <table cellspacing='0' cellpadding='0' width='100%'>
+            <tr>
+              <td style='font-size:100%'>06:20</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.5</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>12:48</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.1</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>18:36</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>2.7</td>
+            </tr>
+          </table>
+        </td>
+        <td class='col-sun'>
+          06:40:26 AM<br/>
+          05:59:44 PM
+        </td>
+        <td class='col-moon'>
+          04:16:08 PM<br/>
+          05:51:18 AM
+        </td>
+        <td class='col-moonphase'>
+          95%
+        </td>
+        <td class='col-pop'>
+          5%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div id='NWS.2021.02.25.hours' class='period' style='display:none'>
+    <table>
+  
+
+      <tr>
+        <td class='col-date'>01:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CLn.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>49</td>
+        <td class='col-dewpoint'>44</td>
+        <td class='col-wind'
+          background='icons/SW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          6 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>04:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/FWn.png' alt='FW' title='Few Clouds' />
+        </td>
+        <td class='col-temp'>47</td>
+        <td class='col-dewpoint'>43</td>
+        <td class='col-wind'
+          background='icons/W.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          4 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           06:20 H 3.5
+        </td>
+        <td class='col-sun'>
+          06:40:26 AM
+        </td>
+        <td class='col-moon'>
+          05:51:18 AM
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>07:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/FW.png' alt='FW' title='Few Clouds' />
+        </td>
+        <td class='col-temp'>46</td>
+        <td class='col-dewpoint'>42</td>
+        <td class='col-wind'
+          background='icons/W.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          4 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+          5%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>10:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/FW.png' alt='FW' title='Few Clouds' />
+        </td>
+        <td class='col-temp'>53</td>
+        <td class='col-dewpoint'>43</td>
+        <td class='col-wind'
+          background='icons/N.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          5 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           12:48 L -0.1
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>13:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/SC.png' alt='SC' title='Scattered' />
+        </td>
+        <td class='col-temp'>58</td>
+        <td class='col-dewpoint'>43</td>
+        <td class='col-wind'
+          background='icons/NE.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          6 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>16:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/SC.png' alt='SC' title='Scattered' />
+        </td>
+        <td class='col-temp'>58</td>
+        <td class='col-dewpoint'>42</td>
+        <td class='col-wind'
+          background='icons/NE.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          6 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           18:36 H 2.7
+        </td>
+        <td class='col-sun'>
+          05:59:44 PM
+        </td>
+        <td class='col-moon'>
+          04:16:08 PM
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>19:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/SCn.png' alt='SC' title='Scattered' />
+        </td>
+        <td class='col-temp'>50</td>
+        <td class='col-dewpoint'>39</td>
+        <td class='col-wind'
+          background='icons/NE.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          5 <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+          5%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+
+  <div id='NWS.2021.02.26' class='summary'>
+    <table>
+      <tr>
+        <td class='col-date' onclick="toggle_hours(this, 'NWS.2021.02.26')">
+          <span class='day'>Fri</span><br/>
+          <span class='date'>26 Feb</span>
+        </td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/B2.png' alt='B2' title='Considerable Cloudiness' />
+        </td>
+        <td class='col-temp'><span class='temphi'>52</span><br/><span class='templo'>39</span></td>
+        <td class='col-dewpoint'>42<br/>36</td>
+        <td class='col-wind'
+            style='vertical-align:middle; text-align:center; background: url()
+            ,url(icons/NE.png)
+            ; background-repeat:no-repeat; background-position:center; background-size:48px;'
+            >
+           
+          <span class='windgust'> </span>LT
+        </td>
+        <td class='col-tides'>
+          <table cellspacing='0' cellpadding='0' width='100%'>
+            <tr>
+              <td style='font-size:100%'>00:36</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.5</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>07:04</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.6</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>13:27</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.4</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>19:20</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.0</td>
+            </tr>
+          </table>
+        </td>
+        <td class='col-sun'>
+          06:39:13 AM<br/>
+          06:00:37 PM
+        </td>
+        <td class='col-moon'>
+          05:24:19 PM<br/>
+          06:31:54 AM
+        </td>
+        <td class='col-moonphase'>
+          98%
+        </td>
+        <td class='col-pop'>
+          30%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+         <img class='precip-img' src='icons/rainshwrs.png' alt='rainshwrs' title='Rain Showers' />
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div id='NWS.2021.02.26.hours' class='period' style='display:none'>
+    <table>
+  
+
+      <tr>
+        <td class='col-date'>01:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/SCn.png' alt='SC' title='Scattered' />
+        </td>
+        <td class='col-temp'>43</td>
+        <td class='col-dewpoint'>36</td>
+        <td class='col-wind'
+            >
+            <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+          06:39:13 AM
+        </td>
+        <td class='col-moon'>
+          06:31:54 AM
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>07:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/B1.png' alt='B1' title='Mostly Cloudy' />
+        </td>
+        <td class='col-temp'>40</td>
+        <td class='col-dewpoint'>36</td>
+        <td class='col-wind'
+          background='icons/NE.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+            <span class='windgust'> </span>LT<br/>
+        </td>
+        <td class='col-tides'>
+           07:04 H 3.6
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+          20%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          <td>
+            <img class='precip-img' src='icons/rainshwrs.png' alt='rainshwrs' title='Rain Showers' />
+            <br/>
+            <20%
+          </td>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>13:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/B2.png' alt='B2' title='Considerable Cloudiness' />
+        </td>
+        <td class='col-temp'>51</td>
+        <td class='col-dewpoint'>40</td>
+        <td class='col-wind'
+            >
+            <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           13:27 L -0.4
+        </td>
+        <td class='col-sun'>
+          06:00:37 PM
+        </td>
+        <td class='col-moon'>
+          05:24:19 PM
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          <td>
+            <img class='precip-img' src='icons/rainshwrs.png' alt='rainshwrs' title='Rain Showers' />
+            <br/>
+            30-50%
+          </td>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>19:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/B2n.png' alt='B2' title='Considerable Cloudiness' />
+        </td>
+        <td class='col-temp'>48</td>
+        <td class='col-dewpoint'>42</td>
+        <td class='col-wind'
+          background='icons/NE.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+            <span class='windgust'> </span>GN<br/>
+        </td>
+        <td class='col-tides'>
+           19:20 H 3.0
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+          30%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          <td>
+            <img class='precip-img' src='icons/rainshwrs.png' alt='rainshwrs' title='Rain Showers' />
+            <br/>
+            30-50%
+          </td>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+
+  <div id='NWS.2021.02.27' class='summary'>
+    <table>
+      <tr>
+        <td class='col-date' onclick="toggle_hours(this, 'NWS.2021.02.27')">
+          <span class='day'>Sat</span><br/>
+          <span class='date'>27 Feb</span>
+        </td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/B2.png' alt='B2' title='Considerable Cloudiness' />
+        </td>
+        <td class='col-temp'><span class='temphi'>62</span><br/><span class='templo'>43</span></td>
+        <td class='col-dewpoint'>55<br/>44</td>
+        <td class='col-wind'
+            style='vertical-align:middle; text-align:center; background: url()
+            ,url(icons/E.png)
+            ,url(icons/S.png)
+            ; background-repeat:no-repeat; background-position:center; background-size:48px;'
+            >
+           
+          <span class='windgust'> </span>GN
+        </td>
+        <td class='col-tides'>
+          <table cellspacing='0' cellpadding='0' width='100%'>
+            <tr>
+              <td style='font-size:100%'>01:24</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.7</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>07:46</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.7</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>14:06</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.5</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>20:04</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.2</td>
+            </tr>
+          </table>
+        </td>
+        <td class='col-sun'>
+          06:37:58 AM<br/>
+          06:01:31 PM
+        </td>
+        <td class='col-moon'>
+          06:33:16 PM<br/>
+          07:08:32 AM
+        </td>
+        <td class='col-moonphase'>
+          100%
+        </td>
+        <td class='col-pop'>
+          60%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+         <img class='precip-img' src='icons/rainshwrs.png' alt='rainshwrs' title='Rain Showers' />
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div id='NWS.2021.02.27.hours' class='period' style='display:none'>
+    <table>
+  
+
+      <tr>
+        <td class='col-date'>01:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/B2n.png' alt='B2' title='Considerable Cloudiness' />
+        </td>
+        <td class='col-temp'>45</td>
+        <td class='col-dewpoint'>45</td>
+        <td class='col-wind'
+            >
+            <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           01:24 L -0.7
+        </td>
+        <td class='col-sun'>
+          06:37:58 AM
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          <td>
+            <img class='precip-img' src='icons/rainshwrs.png' alt='rainshwrs' title='Rain Showers' />
+            <br/>
+            60-70%
+          </td>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>07:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/B2.png' alt='B2' title='Considerable Cloudiness' />
+        </td>
+        <td class='col-temp'>44</td>
+        <td class='col-dewpoint'>44</td>
+        <td class='col-wind'
+          background='icons/E.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+            <span class='windgust'> </span>GN<br/>
+        </td>
+        <td class='col-tides'>
+           07:46 H 3.7
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+          07:08:32 AM
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+          60%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          <td>
+            <img class='precip-img' src='icons/rainshwrs.png' alt='rainshwrs' title='Rain Showers' />
+            <br/>
+            60-70%
+          </td>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>13:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/B2.png' alt='B2' title='Considerable Cloudiness' />
+        </td>
+        <td class='col-temp'>60</td>
+        <td class='col-dewpoint'>55</td>
+        <td class='col-wind'
+            >
+            <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           14:06 L -0.5
+        </td>
+        <td class='col-sun'>
+          06:01:31 PM
+        </td>
+        <td class='col-moon'>
+          06:33:16 PM
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          <td>
+            <img class='precip-img' src='icons/rainshwrs.png' alt='rainshwrs' title='Rain Showers' />
+            <br/>
+            30-50%
+          </td>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>19:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/B2n.png' alt='B2' title='Considerable Cloudiness' />
+        </td>
+        <td class='col-temp'>56</td>
+        <td class='col-dewpoint'>52</td>
+        <td class='col-wind'
+          background='icons/S.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+            <span class='windgust'> </span>LT<br/>
+        </td>
+        <td class='col-tides'>
+           20:04 H 3.2
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+          30%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          <td>
+            <img class='precip-img' src='icons/rainshwrs.png' alt='rainshwrs' title='Rain Showers' />
+            <br/>
+            30-50%
+          </td>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+
+  <div id='NWS.2021.02.28' class='summary'>
+    <table>
+      <tr>
+        <td class='col-date' onclick="toggle_hours(this, 'NWS.2021.02.28')">
+          <span class='day'>Sun</span><br/>
+          <span class='date'>28 Feb</span>
+        </td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/B2.png' alt='B2' title='Considerable Cloudiness' />
+        </td>
+        <td class='col-temp'><span class='temphi'>61</span><br/><span class='templo'>49</span></td>
+        <td class='col-dewpoint'>53<br/>50</td>
+        <td class='col-wind'
+            style='vertical-align:middle; text-align:center; background: url()
+            ,url(icons/NW.png)
+            ,url(icons/NE.png)
+            ; background-repeat:no-repeat; background-position:center; background-size:48px;'
+            >
+           
+          <span class='windgust'> </span>LT
+        </td>
+        <td class='col-tides'>
+          <table cellspacing='0' cellpadding='0' width='100%'>
+            <tr>
+              <td style='font-size:100%'>02:12</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.8</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>08:29</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.7</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>14:46</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.7</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>20:50</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.4</td>
+            </tr>
+          </table>
+        </td>
+        <td class='col-sun'>
+          06:36:43 AM<br/>
+          06:02:23 PM
+        </td>
+        <td class='col-moon'>
+          07:42:20 PM<br/>
+          07:42:25 AM
+        </td>
+        <td class='col-moonphase'>
+          99%
+        </td>
+        <td class='col-pop'>
+          40%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+         <img class='precip-img' src='icons/rainshwrs.png' alt='rainshwrs' title='Rain Showers' />
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div id='NWS.2021.02.28.hours' class='period' style='display:none'>
+    <table>
+  
+
+      <tr>
+        <td class='col-date'>01:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/B2n.png' alt='B2' title='Considerable Cloudiness' />
+        </td>
+        <td class='col-temp'>52</td>
+        <td class='col-dewpoint'>52</td>
+        <td class='col-wind'
+            >
+            <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           02:12 L -0.8
+        </td>
+        <td class='col-sun'>
+          06:36:43 AM
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          <td>
+            <img class='precip-img' src='icons/rainshwrs.png' alt='rainshwrs' title='Rain Showers' />
+            <br/>
+            30-50%
+          </td>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>07:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/B2.png' alt='B2' title='Considerable Cloudiness' />
+        </td>
+        <td class='col-temp'>50</td>
+        <td class='col-dewpoint'>50</td>
+        <td class='col-wind'
+          background='icons/NW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+            <span class='windgust'> </span>LT<br/>
+        </td>
+        <td class='col-tides'>
+           08:29 H 3.7
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+          07:42:25 AM
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+          30%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          <td>
+            <img class='precip-img' src='icons/rainshwrs.png' alt='rainshwrs' title='Rain Showers' />
+            <br/>
+            30-50%
+          </td>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>13:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/OV.png' alt='OV' title='Overcast' />
+        </td>
+        <td class='col-temp'>60</td>
+        <td class='col-dewpoint'>53</td>
+        <td class='col-wind'
+            >
+            <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           14:46 L -0.7
+        </td>
+        <td class='col-sun'>
+          06:02:23 PM
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          <td>
+            <img class='precip-img' src='icons/rainshwrs.png' alt='rainshwrs' title='Rain Showers' />
+            <br/>
+            30-50%
+          </td>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>19:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/OVn.png' alt='OV' title='Overcast' />
+        </td>
+        <td class='col-temp'>56</td>
+        <td class='col-dewpoint'>52</td>
+        <td class='col-wind'
+          background='icons/NE.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+            <span class='windgust'> </span>LT<br/>
+        </td>
+        <td class='col-tides'>
+           20:50 H 3.4
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+          07:42:20 PM
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+          40%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          <td>
+            <img class='precip-img' src='icons/rainshwrs.png' alt='rainshwrs' title='Rain Showers' />
+            <br/>
+            30-50%
+          </td>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+
+  <div id='NWS.2021.03.01' class='summary'>
+    <table>
+      <tr>
+        <td class='col-date' onclick="toggle_hours(this, 'NWS.2021.03.01')">
+          <span class='day'>Mon</span><br/>
+          <span class='date'>01 Mar</span>
+        </td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/B2.png' alt='B2' title='Considerable Cloudiness' />
+        </td>
+        <td class='col-temp'><span class='temphi'>64</span><br/><span class='templo'>51</span></td>
+        <td class='col-dewpoint'>59<br/>52</td>
+        <td class='col-wind'
+            style='vertical-align:middle; text-align:center; background: url()
+            ,url(icons/S.png)
+            ,url(icons/SW.png)
+            ; background-repeat:no-repeat; background-position:center; background-size:48px;'
+            >
+           
+          <span class='windgust'> </span>LT
+        </td>
+        <td class='col-tides'>
+          <table cellspacing='0' cellpadding='0' width='100%'>
+            <tr>
+              <td style='font-size:100%'>03:01</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.8</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>09:13</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.6</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>15:26</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.7</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>21:37</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.6</td>
+            </tr>
+          </table>
+        </td>
+        <td class='col-sun'>
+          06:35:27 AM<br/>
+          06:03:16 PM
+        </td>
+        <td class='col-moon'>
+          08:51:30 PM<br/>
+          08:14:58 AM
+        </td>
+        <td class='col-moonphase'>
+          95%
+        </td>
+        <td class='col-pop'>
+          40%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+         <img class='precip-img' src='icons/rainshwrs.png' alt='rainshwrs' title='Rain Showers' />
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div id='NWS.2021.03.01.hours' class='period' style='display:none'>
+    <table>
+  
+
+      <tr>
+        <td class='col-date'>01:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/B2n.png' alt='B2' title='Considerable Cloudiness' />
+        </td>
+        <td class='col-temp'>53</td>
+        <td class='col-dewpoint'>53</td>
+        <td class='col-wind'
+            >
+            <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           03:01 L -0.8
+        </td>
+        <td class='col-sun'>
+          06:35:27 AM
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          <td>
+            <img class='precip-img' src='icons/rainshwrs.png' alt='rainshwrs' title='Rain Showers' />
+            <br/>
+            30-50%
+          </td>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>07:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/OV.png' alt='OV' title='Overcast' />
+        </td>
+        <td class='col-temp'>52</td>
+        <td class='col-dewpoint'>52</td>
+        <td class='col-wind'
+          background='icons/S.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+            <span class='windgust'> </span>LT<br/>
+        </td>
+        <td class='col-tides'>
+           09:13 H 3.6
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+          08:14:58 AM
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+          40%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          <td>
+            <img class='precip-img' src='icons/rainshwrs.png' alt='rainshwrs' title='Rain Showers' />
+            <br/>
+            30-50%
+          </td>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>13:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/B2.png' alt='B2' title='Considerable Cloudiness' />
+        </td>
+        <td class='col-temp'>63</td>
+        <td class='col-dewpoint'>59</td>
+        <td class='col-wind'
+            >
+            <span class='windgust'> </span><br/>
+        </td>
+        <td class='col-tides'>
+           15:26 L -0.7
+        </td>
+        <td class='col-sun'>
+          06:03:16 PM
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          <td>
+            <img class='precip-img' src='icons/rainshwrs.png' alt='rainshwrs' title='Rain Showers' />
+            <br/>
+            30-50%
+          </td>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>19:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/B2n.png' alt='B2' title='Considerable Cloudiness' />
+        </td>
+        <td class='col-temp'>56</td>
+        <td class='col-dewpoint'>56</td>
+        <td class='col-wind'
+          background='icons/SW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+            <span class='windgust'> </span>GN<br/>
+        </td>
+        <td class='col-tides'>
+           21:37 H 3.6
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+          08:51:30 PM
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+          40%
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          <td>
+            <img class='precip-img' src='icons/rainshwrs.png' alt='rainshwrs' title='Rain Showers' />
+            <br/>
+            30-50%
+          </td>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+
+  <div class='sources'>
+    <p>
+      NWS forecast
+ for MHX NCZ095
+ issued on 23-Feb-2021 02:39.
+      <br/>Tides for Morehead City Harbor, North Carolina issued on 16-Feb-2021 08:00
+     <br/>Report generated in 0.684 seconds.
+    </p>
+  </div>
+
+
+</div>
+
+<h2>Aeris</h2>
+
+<div class='fc_table'>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class='legend'>
+    <table>
+      <tr>
+        <td class='col-date'></td>
+        <td class='col-outlook'></td>
+        <td class='col-temp'><img src='icons/thermometer-red.png' class='legend-img' alt='T' title='temperature' /><br/><span class='units'>&#176;F</span></td>
+        <td class='col-dewpoint'><img src='icons/thermometer-dewpoint.png' class='legend-img' alt='D' title='dewpoint' /><br/><span class='units'>&#176;F</span></td>
+        <td class='col-wind' style='text-align:center'><img src='icons/flag.png' class='legend-img' alt='W' title='wind' /><br/><span class='units'> mph</span></td>
+        <td class='col-tides'><img src='icons/water.png' class='legend-img' alt='tide' title='tides' /><br/><span class='units'> feet</span></td>
+        <td class='col-sun'><img src='icons/sunriseset.png' class='legend-img' alt='S' title='sun' /><br/></td>
+        <td class='col-moon'><img src='icons/moonriseset.png' class='legend-img' alt='M' title='moon' /><br/></td>
+        <td class='col-moonphase'><img src='icons/moonphase.png' class='legend-img' alt='MP' title='moon phase' /><br/></td>
+        <td class='col-pop'><img src='icons/pop.png' class='legend-img' alt='PoP' title='probability of precipitation' /><br/><span class='units'> in</span></td>
+        <td class='col-precip'></td>
+        <td class='col-obvis'></td>
+      </tr>
+    </table>
+  </div>
+
+
+
+
+  <div id='Aeris.2021.02.23' class='summary'>
+    <table>
+      <tr>
+        <td class='col-date' onclick="toggle_hours(this, 'Aeris.2021.02.23')">
+          <span class='day'>Tue</span><br/>
+          <span class='date'>23 Feb</span>
+        </td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CL.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'><span class='temphi'>61</span><br/><span class='templo'>40</span></td>
+        <td class='col-dewpoint'>46<br/>40</td>
+        <td class='col-wind'
+            style='vertical-align:middle; text-align:center; background: url()
+            ,url(icons/NW.png)
+            ,url(icons/W.png)
+            ,url(icons/SW.png)
+            ; background-repeat:no-repeat; background-position:center; background-size:48px;'
+            >
+          7-17
+          <span class='windgust'>22</span>
+        </td>
+        <td class='col-tides'>
+          <table cellspacing='0' cellpadding='0' width='100%'>
+            <tr>
+              <td style='font-size:100%'>04:46</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.1</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>11:23</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>0.3</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>17:02</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>2.2</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>22:57</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>0.0</td>
+            </tr>
+          </table>
+        </td>
+        <td class='col-sun'>
+          06:42:51 AM<br/>
+          05:57:56 PM
+        </td>
+        <td class='col-moon'>
+          02:08:34 PM<br/>
+          04:15:44 AM
+        </td>
+        <td class='col-moonphase'>
+          83%
+        </td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div id='Aeris.2021.02.23.hours' class='period' style='display:none'>
+    <table>
+  
+
+      <tr>
+        <td class='col-date'>07:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/FW.png' alt='FW' title='Few Clouds' />
+        </td>
+        <td class='col-temp'>40</td>
+        <td class='col-dewpoint'>41</td>
+        <td class='col-wind'
+          background='icons/NW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          7 <span class='windgust'>9</span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>08:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/FW.png' alt='FW' title='Few Clouds' />
+        </td>
+        <td class='col-temp'>44</td>
+        <td class='col-dewpoint'>42</td>
+        <td class='col-wind'
+          background='icons/NW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          7 <span class='windgust'>9</span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>09:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/FW.png' alt='FW' title='Few Clouds' />
+        </td>
+        <td class='col-temp'>49</td>
+        <td class='col-dewpoint'>41</td>
+        <td class='col-wind'
+          background='icons/NW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          7 <span class='windgust'>9</span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>10:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CL.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>53</td>
+        <td class='col-dewpoint'>41</td>
+        <td class='col-wind'
+          background='icons/NW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          9 <span class='windgust'>11</span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>11:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CL.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>56</td>
+        <td class='col-dewpoint'>41</td>
+        <td class='col-wind'
+          background='icons/W.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          11 <span class='windgust'>14</span><br/>
+        </td>
+        <td class='col-tides'>
+           11:23 L 0.3
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>12:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CL.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>58</td>
+        <td class='col-dewpoint'>42</td>
+        <td class='col-wind'
+          background='icons/W.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          13 <span class='windgust'>18</span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>13:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CL.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>60</td>
+        <td class='col-dewpoint'>43</td>
+        <td class='col-wind'
+          background='icons/SW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          16 <span class='windgust'>20</span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>14:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CL.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>61</td>
+        <td class='col-dewpoint'>43</td>
+        <td class='col-wind'
+          background='icons/SW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          17 <span class='windgust'>22</span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+          02:08:34 PM
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>15:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CL.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>61</td>
+        <td class='col-dewpoint'>45</td>
+        <td class='col-wind'
+          background='icons/SW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          17 <span class='windgust'>22</span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>16:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CL.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>61</td>
+        <td class='col-dewpoint'>46</td>
+        <td class='col-wind'
+          background='icons/SW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          16 <span class='windgust'>21</span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>17:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CL.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>58</td>
+        <td class='col-dewpoint'>46</td>
+        <td class='col-wind'
+          background='icons/SW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          15 <span class='windgust'>19</span><br/>
+        </td>
+        <td class='col-tides'>
+           17:02 H 2.2
+        </td>
+        <td class='col-sun'>
+          05:57:56 PM
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>18:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CLn.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>55</td>
+        <td class='col-dewpoint'>45</td>
+        <td class='col-wind'
+          background='icons/SW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          12 <span class='windgust'>16</span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>19:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CLn.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>53</td>
+        <td class='col-dewpoint'>44</td>
+        <td class='col-wind'
+          background='icons/SW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          10 <span class='windgust'>13</span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>20:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CLn.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>51</td>
+        <td class='col-dewpoint'>43</td>
+        <td class='col-wind'
+          background='icons/W.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          10 <span class='windgust'>12</span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>21:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CLn.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>50</td>
+        <td class='col-dewpoint'>41</td>
+        <td class='col-wind'
+          background='icons/W.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          9 <span class='windgust'>12</span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>22:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CLn.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>49</td>
+        <td class='col-dewpoint'>40</td>
+        <td class='col-wind'
+          background='icons/W.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          8 <span class='windgust'>12</span><br/>
+        </td>
+        <td class='col-tides'>
+           22:57 L 0.0
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>23:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CLn.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>48</td>
+        <td class='col-dewpoint'>40</td>
+        <td class='col-wind'
+          background='icons/W.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          8 <span class='windgust'>11</span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+
+  <div id='Aeris.2021.02.24' class='summary'>
+    <table>
+      <tr>
+        <td class='col-date' onclick="toggle_hours(this, 'Aeris.2021.02.24')">
+          <span class='day'>Wed</span><br/>
+          <span class='date'>24 Feb</span>
+        </td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CL.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'><span class='temphi'>47</span><br/><span class='templo'>45</span></td>
+        <td class='col-dewpoint'>41<br/>40</td>
+        <td class='col-wind'
+            style='vertical-align:middle; text-align:center; background: url()
+            ,url(icons/W.png)
+            ,url(icons/NW.png)
+            ,url(icons/NW.png)
+            ; background-repeat:no-repeat; background-position:center; background-size:48px;'
+            >
+          5-7
+          <span class='windgust'>9</span>
+        </td>
+        <td class='col-tides'>
+          <table cellspacing='0' cellpadding='0' width='100%'>
+            <tr>
+              <td style='font-size:100%'>05:35</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>3.3</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>12:07</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>0.1</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>17:50</td><td class='tide-hilo' style='font-size:100%'>H</td><td style='font-size:100%; text-align:right;'>2.4</td>
+            </tr>
+            <tr>
+              <td style='font-size:100%'>23:48</td><td class='tide-hilo' style='font-size:100%'>L</td><td style='font-size:100%; text-align:right;'>-0.2</td>
+            </tr>
+          </table>
+        </td>
+        <td class='col-sun'>
+          06:41:39 AM<br/>
+          05:58:50 PM
+        </td>
+        <td class='col-moon'>
+          03:10:13 PM<br/>
+          05:05:56 AM
+        </td>
+        <td class='col-moonphase'>
+          88%
+        </td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div id='Aeris.2021.02.24.hours' class='period' style='display:none'>
+    <table>
+  
+
+      <tr>
+        <td class='col-date'>00:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CLn.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>47</td>
+        <td class='col-dewpoint'>40</td>
+        <td class='col-wind'
+          background='icons/W.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          7 <span class='windgust'>9</span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>01:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CLn.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>46</td>
+        <td class='col-dewpoint'>41</td>
+        <td class='col-wind'
+          background='icons/NW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          6 <span class='windgust'>8</span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>02:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CLn.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>45</td>
+        <td class='col-dewpoint'>41</td>
+        <td class='col-wind'
+          background='icons/NW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          6 <span class='windgust'>7</span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class='col-date'>03:00<br/></td>
+        <td class='col-outlook'>
+          <img class='outlook-img' src='icons/CLn.png' alt='CL' title='Clear' />
+        </td>
+        <td class='col-temp'>45</td>
+        <td class='col-dewpoint'>41</td>
+        <td class='col-wind'
+          background='icons/NW.png' style='text-align:center; background-repeat:no-repeat; background-position:center; background-size:32px;'
+            >
+          5 <span class='windgust'>6</span><br/>
+        </td>
+        <td class='col-tides'>
+        </td>
+        <td class='col-sun'>
+        </td>
+        <td class='col-moon'>
+        </td>
+        <td class='col-moonphase'></td>
+        <td class='col-pop'>
+<br/>
+<br/>
+        </td>
+        <td class='col-precip'>
+          <table width='100%'><tr>
+          </tr></table>
+        </td>
+        <td class='col-obvis'>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+
+  <div class='sources'>
+    <p>
+      Aeris forecast
+ for 34.743313,-76.720492
+ issued on 23-Feb-2021 03:40.
+      <br/>Tides for Morehead City Harbor, North Carolina issued on 16-Feb-2021 08:00
+     <br/>Report generated in 0.332 seconds.
+    </p>
+  </div>
+
+
+</div>
+
+</body>
+</html>

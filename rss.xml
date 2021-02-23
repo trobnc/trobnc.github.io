@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<rss version="2.0" 
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" >
+   <channel>
+      <title>Morehead City, NC, Weather Conditions</title>
+      <link>https://www.pwsweather.com/station/pws/KNCMOREH15</link>
+      <description>Current conditions, and daily, monthly, and yearly summaries</description>
+      <language>en-us</language>
+      <pubDate>Tue, 23 Feb 2021 06:25:00 EST</pubDate>
+
+      <lastBuildDate>Tue, 23 Feb 2021 06:25:00 EST</lastBuildDate>
+      <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+      <generator>weewx 4.4.0</generator>
+      <ttl>5.000000 minutes</ttl>
+      
+      <item>
+         <title>Weather Conditions at 02/23/2021 06:25:00 AM</title>
+         <link>https://www.pwsweather.com/station/pws/KNCMOREH15</link>
+         <description>
+           Outside temperature: 44.8&#176;F; 
+           Barometer: 29.987 inHg; 
+           Wind: 3 mph from 312&#176;; 
+           Rain rate: 0.00 in/h; 
+           Inside temperature: 65.7&#176;F
+         </description>
+         <pubDate>Tue, 23 Feb 2021 06:25:00 EST</pubDate>
+	     <geo:lat>34.743313</geo:lat>
+    	 <geo:long>-76.720492</geo:long>
+ 		 <content:encoded><![CDATA[
+           <p>
+             Time:                02/23/2021 06:25:00 AM<br/>
+             Outside Temperature: 44.8&#176;F<br/>
+             Inside Temperature:  65.7&#176;F<br/>
+             Wind Chill:          44.2&#176;F<br/>
+             Heat Index:          43.6&#176;F<br/>
+             Dewpoint:            44.5&#176;F<br/>
+             Humidity:            99%<br/>
+             Barometer:           29.987 inHg<br/>
+             Wind:                3 mph from 312&#176;<br/>
+             Rain Rate:           0.00 in/h<br/>
+        </p>
+      ]]></content:encoded>
+      </item>
+
+      <item>
+         <title>Daily Weather Summary as of 02/23/2021 06:25:00 AM</title>
+         <link>https://www.pwsweather.com/station/pws/KNCMOREH15</link>
+         <description>
+	        Min outside temperature: 44.1&#176;F at 03:34:52 AM;
+         	Max outside temperature: 49.5&#176;F at 12:04:32 AM;
+	        Min inside temperature:  64.8&#176;F at 04:45:55 AM;
+	        Max inside temperature:  67.9&#176;F at 03:49:59 AM;
+	        Min barometer:           29.897 inHg at 02:48:55 AM;
+	        Max barometer:           29.989 inHg at 06:23:01 AM;
+            Max wind :               8 mph from    N/A at 12:54:33 AM;
+            Rain today:              0.00 in
+         </description>
+         <pubDate>Tue, 23 Feb 2021 06:25:00 EST</pubDate>
+	     <geo:lat>34.743313</geo:lat>
+    	 <geo:long>-76.720492</geo:long>
+ 		 <content:encoded><![CDATA[
+           <p>
+             Day:                     23 Feb 2021<br/>
+	         Min Outside Temperature: 44.1&#176;F at 03:34:52 AM<br/>
+	         Max Outside Temperature: 49.5&#176;F at 12:04:32 AM<br/>
+	         Min Inside Temperature:  64.8&#176;F at 04:45:55 AM<br/>
+	         Max Inside Temperature:  67.9&#176;F at 03:49:59 AM<br/>
+	         Min Barometer:           29.897 inHg at 02:48:55 AM<br/>
+	         Max Barometer:           29.989 inHg at 06:23:01 AM<br/>
+             Max Wind :               8 mph from    N/A at 12:54:33 AM<br/>
+             Rain today:              0.00 in<br/>
+        </p>
+      ]]></content:encoded>
+      </item>
+
+      <item>
+         <title>Monthly Weather Summary as of 02/23/2021 06:25:00 AM</title>
+         <link>https://www.pwsweather.com/station/pws/KNCMOREH15</link>
+         <description>
+	        Min outside temperature: 28.4&#176;F at 02/21/2021 06:55:00 AM;
+         	Max outside temperature: 66.0&#176;F at 02/16/2021 02:18:17 AM;
+	        Min inside temperature:  59.8&#176;F at 02/14/2021 06:03:44 PM;
+	        Max inside temperature:  75.0&#176;F at 02/07/2021 04:34:49 PM;
+	        Min barometer:           29.609 inHg at 02/01/2021 06:46:33 PM;
+	        Max barometer:           30.651 inHg at 02/21/2021 10:29:27 AM;
+            Max wind :               30 mph from    N/A at 02/16/2021 02:17:02 AM;
+            Rain total for month:    8.78 in
+         </description>
+         <pubDate>Tue, 23 Feb 2021 06:25:00 EST</pubDate>
+ 		 <content:encoded><![CDATA[
+           <p>
+             Month:                   February 2021<br/>
+	         Max Outside Temperature: 66.0&#176;F at 02/16/2021 02:18:17 AM<br/>
+	         Min Outside Temperature: 28.4&#176;F at 02/21/2021 06:55:00 AM<br/>
+	         Max Inside Temperature:  75.0&#176;F at 02/07/2021 04:34:49 PM<br/>
+	         Min Inside Temperature:  59.8&#176;F at 02/14/2021 06:03:44 PM<br/>
+	         Min Barometer:           29.609 inHg at 02/01/2021 06:46:33 PM<br/>
+	         Max Barometer:           30.651 inHg at 02/21/2021 10:29:27 AM<br/>
+             Max Wind :               30 mph from    N/A at 02/16/2021 02:17:02 AM<br/>
+             Rain total for month:    8.78 in<br/>
+        </p>
+      ]]></content:encoded>
+      </item>
+
+      <item>
+         <title>Yearly Weather Summary as of 02/23/2021 06:25:00 AM</title>
+         <link>https://www.pwsweather.com/station/pws/KNCMOREH15</link>
+         <description>
+	        Min outside temperature: 23.4&#176;F at 01/30/2021 03:16:02 AM;
+         	Max outside temperature: 70.7&#176;F at 01/03/2021 02:06:47 PM;
+	        Min inside temperature:  59.8&#176;F at 02/14/2021 06:03:44 PM;
+	        Max inside temperature:  75.7&#176;F at 01/09/2021 04:32:46 PM;
+	        Min barometer:           29.609 inHg at 02/01/2021 06:46:33 PM;
+	        Max barometer:           30.651 inHg at 02/21/2021 10:29:27 AM;
+            Max wind :               30 mph from    N/A at 02/16/2021 02:17:02 AM;
+            Rain total for year:     14.07 in
+         </description>
+         <pubDate>Tue, 23 Feb 2021 06:25:00 EST</pubDate>
+ 		 <content:encoded><![CDATA[
+           <p>
+             Year:                    2021<br/>
+	         Max Outside Temperature: 70.7&#176;F at 01/03/2021 02:06:47 PM<br/>
+	         Min Outside Temperature: 23.4&#176;F at 01/30/2021 03:16:02 AM<br/>
+	         Max Inside Temperature:  75.7&#176;F at 01/09/2021 04:32:46 PM<br/>
+	         Min Inside Temperature:  59.8&#176;F at 02/14/2021 06:03:44 PM<br/>
+	         Min Barometer:           29.609 inHg at 02/01/2021 06:46:33 PM<br/>
+	         Max Barometer:           30.651 inHg at 02/21/2021 10:29:27 AM<br/>
+             Max Wind :               30 mph from    N/A at 02/16/2021 02:17:02 AM<br/>
+             Rain total for year:     14.07 in<br/>
+        </p>
+      ]]></content:encoded>
+      </item>
+
+   </channel>
+</rss>
